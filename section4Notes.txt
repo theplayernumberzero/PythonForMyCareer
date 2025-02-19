@@ -1,0 +1,358 @@
+Section Notes
+If statement:
+
+An If statement is used to make a decision based on a specific condition.
+
+This allows for logical decisions to be made based on certain criteria.
+
+For instance, if it is raining outside, you won't go shopping. Conversely, if it is not raining, you will go outside.
+
+In this example, the condition that determined the decision was whether it was raining or not.
+
+
+
+Python allows for the same type of decision-making through the use of If statements.
+
+For instance, a program can be written to determine whether a person is an adult or not based on their age. The code can be explained line-by-line as follows:
+
+
+
+age = input('Enter your age')  # Prompts the user to enter their age
+age = int(age)  # Converts the input to an integer
+ 
+if age>=18:  # If the age is greater than or equal to 18, execute the next line
+    print('You are an adult')  # Prints the message "You are an adult"
+else:  # If the age is less than 18, execute the next line
+    print('You are not an adult')  # Prints the message "You are not an adult"
+Indentation in Python is used to define blocks of code.
+
+In the above code, the lines of code within the if statement and the else statement are indented to show that they are a part of those blocks.
+
+This is how Python knows which lines of code are to be executed based on which condition is met.
+
+Indentation is typically four spaces or one tab, and consistency in indentation is essential for proper execution of the code.
+
+
+
+Range in Python:
+
+Range is an essential concept in Python used to create a sequence of numbers.
+
+It enables us to create a list of numbers from a given range.
+
+For instance, to create a list of numbers from 1 to 10, we can use the range function instead of typing out all the numbers individually.
+
+
+
+Using the range function, we can create a sequence of numbers in the following way:
+
+numbers = list(range(10))
+This will create a list of numbers from 0 to 9, i.e., a total of 10 numbers. However, if we want to create a range from 1 to 10, we can pass two parameters to the range function, start, and stop:
+
+numbers = list(range(1,11))
+This will create a list of numbers from 1 to 10. Similarly, to create a list of 100 numbers, we can use the following code:
+
+numbers = list(range(1,101))
+
+
+The range function takes two parameters, start and stop, and creates a sequence of numbers from start to stop-1.
+
+Additionally, we can add an optional third parameter called step, which specifies the number of steps we need to skip in the range.
+
+For example, instead of printing all the numbers from 1 to 100 in sequence like 1, 2, 3, we could print digits like 1, 4, 7, which means we want a gap of 3 after every number. We can do this by specifying the step parameter as follows:
+
+range(1,101,3)
+This will create a sequence of numbers with a gap of 3 after every number.
+
+
+
+For loop in Python:
+
+A for loop in Python allows you to execute a snippet of code multiple number of times.
+
+Here is a simple example of a for loop:
+
+for x in range(1, 10):
+    print(x)
+The range() function in Python generates a sequence of numbers based on the specified start, stop, and step values. In this case, range(1, 10) will generate a sequence of numbers starting from 1 and ending at 9 (up to, but not including 10).
+
+The for loop then iterates over each value in this sequence. For each iteration, the loop assigns the current value from the sequence to the variable x. The code block inside the loop, which is indented, is then executed.
+
+In this example, the code block simply prints the value of x using the print() function. Therefore, during each iteration of the loop, the value of x will be printed.
+
+When you run this code, it will output the numbers from 1 to 9, each on a separate line
+
+
+
+Iterating through a list of items:
+
+A for loop can also be used to iterate through a list of items as well.
+
+Here is a simple example of using a for loop to iterate through a list of fruits:
+
+fruits = ['apple', 'mango', 'banana', 'orange']
+ 
+for x in fruits:
+    print(x)
+First, we have a list called fruits that contains several string elements, namely 'apple', 'mango', 'banana', and 'orange'.
+
+The for loop iterates over each element in the fruits list. For each iteration, the loop assigns the current element to the variable x. The code block inside the loop, which is indented, is then executed.
+
+In this example, the code block simply prints the value of x using the print() function. Therefore, during each iteration of the loop, the current fruit name will be printed.
+
+When you run this code, it will output each fruit name on a separate line.
+
+
+
+Iterating through a list of dictionary:
+
+A for loop can also be used to iterate through a dictionary as well just as we iterate through a list.
+
+Here is an example of iterating through a dictionary using a for loop:
+
+people = {"John": 32, "Rob": 40, "Tim": 20}
+ 
+# To get access to keys
+for x in people:
+    print(x)
+ 
+# To get access to values
+for x in people:
+    print(people[x])
+The dictionary people is defined with key-value pairs representing names and ages of individuals.
+
+The first for loop iterates over the dictionary people. During each iteration, the loop assigns the current key to the variable x. The code block inside the loop prints the value of x, which represents the current key. This loop allows you to access and work with the keys of the dictionary.
+
+
+
+The second for loop also iterates over the dictionary people. Similarly, during each iteration, the loop assigns the current key to the variable x. However, this time the code block inside the loop prints the value associated with the current key. By using people[x], we can access the value corresponding to the key x in the people dictionary.
+
+
+
+While loop:
+
+A while loop in Python is a control flow statement that allows you to repeatedly execute a block of code as long as a specified condition remains true. It has the following general syntax:
+
+while condition:
+    # Code block to be executed repeatedly
+
+
+The condition is a boolean expression that determines whether the loop should continue executing or not. It is evaluated before each iteration of the loop. If the condition is True, the code block inside the loop is executed. If the condition is False, the loop is exited, and the program continues executing from the next statement after the loop.
+
+The code block indented below the while statement is the body of the loop. It contains the statements that will be executed repeatedly as long as the condition remains true. This block of code should perform some operations or tasks that will eventually modify the condition, allowing the loop to terminate.
+
+After executing the code block, the program goes back to the beginning of the while loop and checks the condition again. If the condition is still True, the code block is executed again. This process continues until the condition becomes False.
+
+It's important to ensure that the code inside the while loop eventually modifies the condition; otherwise, the loop will continue indefinitely, resulting in an infinite loop.
+
+Example of a while loop:
+
+counter = 0
+ 
+while counter <= 10:
+    print(counter)
+    counter = counter + 1
+
+
+The variable counter is initialized with a value of 0. This variable will be used to keep track of the current count.
+
+The while loop begins with the condition counter <= 10. This condition specifies that the loop should continue executing as long as the value of counter is less than or equal to 10.
+
+Inside the loop, the current value of counter is printed using the print() function.
+
+After printing the value of counter, the variable is incremented by 1 using the statement counter = counter + 1 (or the equivalent counter += 1).
+
+The program then goes back to the beginning of the while loop and checks the condition again. If the condition counter <= 10 is still true, the loop continues to the next iteration. If the condition is false (i.e., counter becomes greater than 10), the loop terminates, and the program continues executing the statements after the loop.
+
+This process repeats until the condition counter <= 10 becomes false, resulting in a total of 11 iterations.
+
+
+
+Break:
+
+In Python, the break statement is used to terminate the execution of a loop prematurely. When break is encountered within a loop (such as for or while), the loop is immediately exited, and the program continues to execute from the next statement after the loop.
+
+The break statement is often used in combination with conditional statements to control the loop termination based on certain conditions. Here's the general syntax of the break statement:
+
+while condition:
+    # code block
+    if condition:
+        break
+    # more code
+In the above example, the break statement is placed within an if statement. When the specified condition evaluates to True, the break statement is executed, and the loop is terminated even if the original condition of the while loop is still satisfied.
+
+
+
+Here is an example of a break statement:
+
+counter = 0
+ 
+while counter <= 10:
+    counter = counter + 1
+    if counter == 5:
+        break
+    print(counter)
+ 
+print('Line after break')
+In the given code, we have a while loop that runs as long as the counter variable is less than or equal to 10. The loop increments the counter by 1 in each iteration using the line counter = counter + 1.
+
+Inside the loop, there is an if statement that checks if the counter is equal to 5. If the condition evaluates to True, the break statement is executed. This causes the loop to be immediately terminated, even though the original condition (counter <= 10) might still be satisfied.
+
+When the counter is equal to 5, the break statement is triggered, and the loop is exited. After the loop, the line print('Line after break') is executed. This line will be executed regardless of the break statement because the break statement only stops the loop's execution, not the execution of the entire program.
+
+In summary, the code prints the values of counter from 1 to 4 (inclusive) and then breaks out of the loop when counter reaches 5. After the loop, the line print('Line after break') is executed.
+
+
+
+Continue:
+
+A continue statement will immediately terminate a loop and the execution starts again from top of the loop, the conditional expression is re-evaluated and it is determined if loop will be executed again or not.
+
+Example of a continue statement:
+
+counter = 0
+ 
+while counter <= 10:
+    counter = counter + 1
+    if counter == 5:
+        continue
+    print(counter)
+ 
+print('Line after continue')
+We have a while loop that runs as long as the value of counter is less than or equal to 10. The initial value of counter is 0.
+
+Within the loop, counter is incremented by 1 using the line counter = counter + 1. This means that with each iteration of the loop, the value of counter increases by 1.
+
+Inside the loop, there is an if statement that checks if the value of counter is equal to 5. If it is, the continue statement is encountered. When continue is executed, it skips the rest of the code within the loop for that iteration and moves on to the next iteration. In this case, when counter is 5, the print(counter) statement is skipped, and the loop proceeds to the next iteration.
+
+The line print(counter) inside the loop is responsible for printing the current value of counter for each iteration. However, when counter is 5, it is skipped due to the continue statement.
+
+Once the loop completes, the line print('Line after continue') is executed. This line is not part of the loop and will be printed after the loop has finished running.
+
+
+
+Adding items to the cart(list) using a for loop:
+
+To accept multiple inputs from a user, we can make use of a for loop.
+
+In the code below we accept items to be added to the cart and save them in a list called cart.
+
+However, with this for loop we are limited by asking the user the number of items they want to add hence making our code less dynamic
+
+cart = []
+ 
+# Accept the number of items the user wants
+n = int(input("Enter the number of items: "))
+ 
+# Loop to add items to the cart
+for x in range(n):
+    item = input("Enter item to add to the cart: ")
+    cart.append(item)
+    print(cart)
+ 
+# This code accepts only one item at a time based on the given input.
+In this code, we start by initializing an empty list cart to store the items.
+
+Then, we ask the user to enter the number of items they want to add to the cart using the input function and store it in the variable n.
+
+Next, we use a for loop to iterate n times. In each iteration, we prompt the user to enter an item to add to the cart using the input function and store it in the variable item. The item is then appended to the cart list using the append method.
+
+After adding an item to the cart, we print the current contents of the cart by printing the cart list.
+
+Finally, the loop ends, and the program finishes executing.
+
+Note: The code as provided only allows the user to enter one item at a time, and it repeats the process n times based on the user's input.
+
+
+
+Adding items to the cart using while loop:
+
+Let’s say I do not want to set a limit on the no of items I can add.
+
+In this case we can use a while loop which infinitely accepts products till we tell the program to stop.
+
+pythonCopy code
+cart = []
+ 
+while True:
+    choice = input('Do you want to add an item to the cart? ')
+    if choice == "yes":
+        item = input("Enter the item you want to add: ")
+        cart.append(item)
+        print(f'Current cart contents are: {cart}')
+    else:
+        break
+ 
+print(f"Thank you, your final cart contents are: {cart}")
+In this code, we initialize an empty list cart to store the items.
+
+If the user chooses not to add an item (enters "no"), the loop breaks, and the code continues executing after the loop.
+
+
+
+
+
+Adding items to cart from a given product list:
+
+Instead of accepting a simple string value as a product, we now present users with a list of products.
+
+We create a list of products where each product is defined in terms of a Python dictionary.
+
+products = [
+    {"name": "Smartphone", "price": 500, "description": "A handheld device used for communication and browsing the internet."},
+    {"name": "Laptop", "price": 1000, "description": "A portable computer that is easy to carry around."},
+    {"name": "Headphones", "price": 50, "description": "A pair of earphones worn over the head to listen to music."},
+    {"name": "Smartwatch", "price": 300, "description": "A wearable device used for fitness tracking and receiving notifications."},
+    {"name": "Bluetooth speaker", "price": 100, "description": "A portable speaker that connects wirelessly to devices using Bluetooth technology."}
+]
+cart = []
+ 
+while True:
+    choice = input('Do you want to continue shopping? ')
+ 
+    if choice == "y":
+        print('Here is a list of products and their prices')
+        for index, product in enumerate(products):
+            print(f"{index}: {product['name']} : {product['description']} : ${product['price']}")
+        product_id = int(input("Enter the id of the product you want to add to the cart"))
+ 
+        # Check if the product is already present in the cart
+        if products[product_id] in cart:
+            # If present, increase the quantity of the product
+            products[product_id]["quantity"] += 1
+        else:
+            # If not present, add the product to the cart with a quantity of 1
+            products[product_id]["quantity"] = 1
+            cart.append(products[product_id])
+ 
+        # Code to display the current cart contents, including the name, description, price, and quantity
+        total = 0
+        print('Here are the contents in your cart')
+        for product in cart:
+            print(f"{product['name']} : {product['description']} : ${product['price']} : QTY:{product['quantity']}")
+            total += product['price'] * product['quantity']
+        print(f"Cart total is: ${total}")
+    else:
+        break
+ 
+print(f"Thank you, your final cart contents are {cart}")
+In this code, we start by defining a list called products which contains dictionaries representing different products. Each product dictionary has the keys "name", "price", and "description" with corresponding values.
+
+We initialise an empty list called cart to store the selected products.
+
+The code enters a while loop that continues indefinitely until the user chooses to stop shopping by entering something other than "y" when prompted. Inside the loop, it displays the list of products and their prices using a for loop and the enumerate() function to get both the index and the product.
+
+The user is then prompted to enter the ID of the product they want to add to the cart. If the selected product is already present in the cart, its quantity is increased by 1. Otherwise, the product is added to the cart with a quantity of 1.
+
+After updating the cart, the code displays the current contents of the cart by iterating through the cart list and printing the product's name, description, price, and quantity. It also calculates the total price of the items in the cart.
+
+Once the user chooses to stop shopping, the loop breaks, and the final contents of the cart are printed.
+
+
+
+
+
+
+
+
+
