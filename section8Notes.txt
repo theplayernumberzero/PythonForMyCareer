@@ -1,0 +1,468 @@
+Section Notes
+File handling in Python:
+
+This is how we can open a file in Python. Python has a built-in function called open which takes two parameters. The first parameter is the path of the file that we want to open, and the second parameter is the mode in which we want to read the file.
+
+The open function opens the file and returns a file handle. We can use this file handle to perform operations on the file. For example, we can read data from the file, write data to the file, or close the file.
+
+Here's an example of how we can open a file in read mode:
+
+file = open('data.txt', 'r')
+
+
+Reading data from a file:
+
+The open function in Python returns a file handle which is an object.
+
+We can use methods such as read and write on it to perform operations like reading and writing data.
+
+We can use the read method to read data from the file. For instance, to read the entire content of the file, we can use:
+
+file = open('data.txt','r')
+content = file.read()
+print(content)
+If we want to read only a specific number of bytes from the file, we can pass the number of bytes as an argument to the read method like:
+
+content = file.read(10)
+
+
+We can also read a single line from the file using the readline method like:
+
+content = file.readline()
+
+
+It is important to remember to close the file after performing any operations on it. We can do this using the close method like:
+
+file = open('data.txt','r')
+content = file.readline()
+print(content)
+file.close()
+
+
+Writing data to a file:
+
+To write to a file using Python, you can use the built-in open function and call its write method. First, you need to open the file in write mode using the 'w' parameter:
+
+file = open('data.txt','w')
+
+
+Then, use the write method to write the content you want to add to the file:
+
+file.write('New content to be added to file')
+Don't forget to close the file using the close method:
+
+file.close()
+However, note that if you use 'w' mode, the previous contents of the file will be deleted before writing new data. If you want to preserve the existing data and add new content to the file, use the append mode 'a' instead of 'w'.
+
+
+
+Appending data to a file:
+
+file = open('data.txt','a')
+content = 'New content to be added to file'
+file.write(content)
+file.close()
+
+
+
+
+Opening a file using with:
+
+In Python, the with statement is used to ensure that resources are properly managed, especially when working with files. It provides a convenient way to open and handle files, automatically taking care of closing the file when done, even if an exception occurs.
+
+# Open a file using "with" statement
+with open("example.txt", "r") as file:
+    # Read and print the contents of the file
+    contents = file.read()
+    print(contents)
+When the with block is finished, the file is automatically closed so that we don’t have to worry about manually closing the file.
+
+
+
+Readling & Readlines
+
+Readline method reads a single line from the file and returns it as a string.
+
+Every time the readline method is called, the file pointer moves to the next line.
+
+Create a file with the following content
+
+hello
+world
+Now write this code to read line:
+
+with open("example.txt", "r") as file:
+    line1 = file.readline()
+    line2 = file.readline()
+ 
+print("Line 1:", line1)
+print("Line 2:", line2)
+Readlines
+Readlines method reads all the lines from the file and then returns them as a list of strings.
+
+Every line is an item in the list.
+
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+ 
+print("Lines:", lines)
+Now access evvery single line from the list by looping through the list:
+
+for line in lines:
+    print(line)
+But now you will be able to see that there are a lot of whitespaces between the names.
+
+
+
+Strip, lstrip & rstrip.
+
+Strip method removes trailing characters from a string.
+
+By default the strip method removes whitespace characters(spaces, tabs, & newlines)
+
+But we could also specify a specific character we want to remove from a string.
+
+Here is an example of the strip method:
+
+text = "   Hello, World!   "
+stripped_text = text.strip()
+ 
+print(stripped_text)  # Output: "Hello, World!"
+The lstrip() method removes leading characters from a string. It works similar to strip(), but only removes characters from the left (beginning) of the string.
+
+text = "   Hello, World!   "
+left_stripped_text = text.lstrip()
+ 
+print(left_stripped_text)  # Output: "Hello, World!   "
+The rstrip() method removes trailing characters from a string. It works similar to strip(), but only removes characters from the right (end) of the string.
+
+text = "   Hello, World!   "
+right_stripped_text = text.rstrip()
+ 
+print(right_stripped_text)  # Output: "   Hello, World!"
+Using strip to remove whitespaces from the previous program.
+
+with open("names.txt", "r") as file:
+    lines = file.readlines()
+ 
+for line in lines:
+    print(line.strip())
+Saving data to a file:
+
+file = open("names.txt", "a")
+ 
+while True:
+    name = input('Enter name to be added: ')
+    file.write(name+'\\n')
+    choice = input("Do you want to add more names? (y/n)")
+    if choice == 'n':
+	file.close()
+        break
+Reading data from a file:
+
+Write a program to get all the entered names and then capitalise them
+
+file = open("names.txt", "a")
+ 
+while True:
+    name = input('Enter name to be added: ')
+    file.write(name+'\\n')
+    choice = input("Do you want to add more names? (y/n)")
+    if choice == 'n':
+        file.close()
+        break
+ 
+# write code to read all the names in the file and capitalize them.
+file = open("names.txt", "r")
+lines = file.readlines()
+ 
+for line in lines:
+    print(line.strip().capitalize())
+    # capitalize every line
+Saving complex data into a file.
+
+Let’s write a program which accepts complex data from the user and then save it into a file and also read that data back.
+
+To do so, we first convert the user data into an f-string which is saved into the file.
+
+def save_user_data():
+    # Accept user input for name, email, and contact
+    name = input("Enter name: ")
+    email = input("Enter email: ")
+    contact = input("Enter contact: ")
+ 
+    # Create a string with the user data
+    user_data = f"Name: {name}\\nEmail: {email}\\nContact: {contact}\\n"
+ 
+    # Open the file in append mode and write the user data
+    #if you use with, you don't have to close the file back.
+    with open("user_data.txt", "a") as file:
+        file.write(user_data)
+ 
+    print("User data saved successfully!")
+ 
+def read_user_data():
+    # Open the file in read mode
+    with open("user_data.txt", "r") as file:
+        # Read and print the file contents
+        print(file.read())
+ 
+# Save user data
+save_user_data()
+ 
+# Read user data from file
+read_user_data()
+Now this works well, however the format in which the data is stored is not that good.
+
+Hence we instead store data in a JSON format.
+
+Serializing data into JSON format.
+
+Now instead of saving data directly into files, we need to learn how to serialise data.
+
+Serialisation basically means converting data into a stream so that it can be transmitted and saved easily.
+
+In this case as we want to save data into a file, we must first serialise it.
+
+To store complex data in Python we could use Python dictionaries.
+
+For example, let’s say we have to save user data such as name, email and contact.
+
+However, storing this dictionary into a file is a bit inconvenient.
+
+Hence we convert the Python dictionary into a JSON object.
+
+JSON stands for JavaScript Object Notation.
+
+Let’s take an example to understand this.
+
+Create a simple Python dictionary.
+
+import json
+ 
+# Create a Python dictionary
+data = {
+    "name": "John Doe",
+    "age": 30,
+    "city": "New York"
+}
+ 
+# Serialize the data to a JSON string
+json_data = json.dumps(data)
+#The json.dumps() function is used to convert the data dictionary into 
+#a JSON string.
+ 
+print(json_data)
+The json.dumps() function is used to convert the data dictionary into a JSON string.
+
+To deserialize JSON data back into Python objects, you can use the json.loads() function. Here's an example:
+
+import json
+ 
+# JSON string
+json_data = '{"name": "John Doe", "age": 30, "city": "New York"}'
+ 
+# Deserialize the JSON string to a Python dictionary
+data = json.loads(json_data)
+ 
+print(data)
+print(data["name"])
+print(data["age"])
+print(data["city"])
+The json.loads() function is used to deserialize the JSON string into a Python dictionary called data.
+
+JSON is a widely used format for data serialization due to its simplicity, human-readability, and compatibility with various programming languages and systems.
+
+
+
+Storing JSON data into a file.
+
+Let’s write a program that can save data of multiple users, save it into a file in json format.
+
+Also, even if we run the program multiple times, the data which was saved before still should persist.
+
+import json
+import os
+ 
+def save_user_data():
+    user_list = []
+ 
+    while True:
+        # Accept user input for name, email, and contact
+        name = input("Enter name (or 'quit' to exit): ")
+ 
+        if name.lower() == "quit":
+            break
+ 
+        email = input("Enter email: ")
+        contact = input("Enter contact: ")
+ 
+        # Create a dictionary with the user data
+        user_data = {
+            "name": name,
+            "email": email,
+            "contact": contact
+        }
+ 
+        user_list.append(user_data)
+ 
+    if os.path.exists("user_data.json"):
+        # Load existing user data from the file
+        with open("user_data.json", "r") as file:
+            existing_data = json.load(file)
+ 
+        # Append the new user data to the existing data
+        user_list.extend(existing_data)
+ 
+    # Open the file in write mode and save the user data as JSON
+    with open("user_data.json", "w") as file:
+        json.dump(user_list, file)
+ 
+    print("User data saved successfully!")
+ 
+def read_user_data():
+    # Check if the file exists
+    if not os.path.exists("user_data.json"):
+        print("No user data found.")
+        return
+ 
+    # Open the file in read mode
+    with open("user_data.json", "r") as file:
+        # Load the JSON data
+        user_list = json.load(file)
+ 
+    # Print the user data
+    print("User Data:")
+    for user_data in user_list:
+        print("Name:", user_data["name"])
+        print("Email:", user_data["email"])
+        print("Contact:", user_data["contact"])
+        print()
+ 
+# Save user data
+save_user_data()
+ 
+# Read user data from file
+read_user_data()
+Editing data in a file.
+
+Let’s also provide a functionality which allows users to edit the data of an already existing user.
+
+The function starts by checking if the file "user_data.json" exists using the os.path.exists() function. If the file doesn't exist, it prints a message stating that no user data is found and returns from the function.
+
+If the file exists, it proceeds to open the file in read mode using the open() function within a with statement. The file object is assigned to the variable file.
+
+The json.load() function is used to load the JSON data from the file into a Python object. The loaded data is assigned to the variable user_list. Now, user_list contains a list of dictionaries where each dictionary represents the data of a user.
+
+A variable user_found is initialized as False. It will be used to determine if the user with the specified name is found in the user list.
+
+The code then iterates over each user data in the user_list using a for loop. It compares the lowercase version of the user's name with the lowercase version of the provided name parameter using the .lower() method. If a match is found, it proceeds to update the user's email and contact information.
+
+Inside the loop, the code prompts the user to enter the updated email and contact using the input() function. The inputs are stored in the variables email and contact, respectively.
+
+The user's data in the user_data dictionary is then updated with the new email and contact information.
+
+The user_found flag is set to True to indicate that the user was found and their data was updated. The loop is then exited using the break statement.
+
+After the loop, an if condition checks if the user_found flag is still False, indicating that the user was not found in the user list. In this case, it prints a message stating that the user was not found.
+
+If the user was found and their data was updated, the code proceeds to open the "user_data.json" file in write mode using the open() function within a with statement. The file object is assigned to the variable file.
+
+The json.dump() function is used to write the updated user_list data back to the file in JSON format.
+
+Finally, a message is printed to indicate that the user data was updated successfully.
+
+def edit_user_data(name):
+    # Check if the file exists
+    if not os.path.exists("user_data.json"):
+        print("No user data found.")
+        return
+ 
+    # Open the file in read mode
+    with open("user_data.json", "r") as file:
+        # Load the JSON data
+        user_list = json.load(file)
+ 
+    user_found = False
+ 
+    # Search for the user based on the name
+    for user_data in user_list:
+        if user_data["name"].lower() == name.lower():
+            # Prompt the user for updated email and contact
+            email = input("Enter updated email: ")
+            contact = input("Enter updated contact: ")
+ 
+            # Update the user data
+            user_data["email"] = email
+            user_data["contact"] = contact
+ 
+            user_found = True
+            break
+ 
+    if not user_found:
+        print("User not found.")
+ 
+    # Open the file in write mode and save the updated user data as JSON
+    with open("user_data.json", "w") as file:
+        json.dump(user_list, file)
+ 
+    print("User data updated successfully!")
+ 
+ 
+
+
+Delete data from file:
+
+The function starts by checking if the file "user_data.json" exists using the os.path.exists() function. If the file doesn't exist, it prints a message stating that no user data is found and returns from the function.
+
+If the file exists, it proceeds to open the file in read mode using the open() function within a with statement. The file object is assigned to the variable file.
+
+The json.load() function is used to load the JSON data from the file into a Python object. The loaded data is assigned to the variable user_list. Now, user_list contains a list of dictionaries where each dictionary represents the data of a user.
+
+A variable user_found is initialized as False. It will be used to determine if the user with the specified name is found in the user list.
+
+The code then iterates over each user data in the user_list using a for loop. It compares the lowercase version of the user's name with the lowercase version of the provided name parameter using the .lower() method. If a match is found, it proceeds to remove the user's data from the user_list.
+
+Inside the loop, the code uses the user_list.remove() method to remove the user_data dictionary from the user_list.
+
+The user_found flag is set to True to indicate that the user was found and their data was deleted. The loop is then exited using the break statement.
+
+After the loop, an if condition checks if the user_found flag is still False, indicating that the user was not found in the user list. In this case, it prints a message stating that the user was not found.
+
+If the user was found and their data was deleted, the code proceeds to open the "user_data.json" file in write mode using the open() function within a with statement. The file object is assigned to the variable file.
+
+The json.dump() function is used to write the updated user_list data back to the file in JSON format.
+
+Finally, a message is printed to indicate that the user data was deleted successfully.
+
+def delete_user_data(name):
+    # Check if the file exists
+    if not os.path.exists("user_data.json"):
+        print("No user data found.")
+        return
+ 
+    # Open the file in read mode
+    with open("user_data.json", "r") as file:
+        # Load the JSON data
+        user_list = json.load(file)
+ 
+    user_found = False
+ 
+    # Search for the user based on the name
+    for user_data in user_list:
+        if user_data["name"].lower() == name.lower():
+            # Remove the user data from the list
+            user_list.remove(user_data)
+ 
+            user_found = True
+            break
+ 
+    if not user_found:
+        print("User not found.")
+ 
+    # Open the file in write mode and save the updated user data as JSON
+    with open("user_data.json", "w") as file:
+        json.dump(user_list, file)
+ 
+    print("User data deleted successfully!")
+ 
