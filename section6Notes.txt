@@ -1,0 +1,94 @@
+Section Notes
+Modules in Python:
+
+he development of large and complex applications/programs often involves breaking them down into smaller modules, which can then be combined to form the larger program.
+
+There are two types of modules in Python:
+
+Built-in modules
+
+Modules that can be created by us or by other programmers.
+
+To create a module, we simply need to create a ".py" file and write a Python function in it.
+
+For example, we can create a module called greet with a hello function inside it.
+
+
+
+We can create a new file called "greet.py" and add the following code to it:
+
+def hello():
+    print('Welcome to the club')
+
+
+We can then use the module in our "demo.py" file:
+
+import greet
+ 
+greet.hello()
+
+
+The module can have multiple functions, not just "greet". For example, we can add another function called "bye":
+
+def hello():
+    print('Welcome to the club')
+ 
+def bye():
+    print('Goodbye, thanks for visiting')
+
+
+We can also import specific functions from a module using the "from" keyword:
+
+from greet import hello, bye
+ 
+hello()
+bye()
+
+
+Using built-in Python modules:
+
+
+
+Let's use a built-in module called random.
+
+In the random module, we have multiple functions used for different purposes.
+
+
+
+Let's use the randint function, which generates random numbers between the given range:
+
+import random
+ 
+result = random.randint(1,10)
+print(result)
+
+
+We could also import it this way:
+
+from random import randint
+ 
+result = randint(1,10)
+print(result)
+
+
+Let's use another module called the datetime module.
+
+The datetime module allows us to perform multiple operations with respect to date and time.
+
+
+
+Let's use the datetime module to get the current date and time:
+
+import datetime
+ 
+today_date = datetime.date.today()
+current_time = datetime.datetime.now()
+print(today_date)
+print(current_time)
+# but a better way to write the above code is
+from datetime import date, datetime
+ 
+today_date = date.today()
+current_time = datetime.now()
+print(today_date)
+print(current_time)
