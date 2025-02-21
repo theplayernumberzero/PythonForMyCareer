@@ -1,0 +1,124 @@
+Section Notes
+Syntax error:
+
+Syntax error occurs when an incorrect statement is written in the code, violating the syntax rules of the programming language.
+
+For instance, if a function is declared incorrectly without a colon, like in the following code:
+
+def function()
+    print("Hello World")
+This code will result in a syntax error and the error console will point out the exact location of the error.
+
+Syntax errors are grammatical programming errors that arise when we do not follow the syntax rules.
+
+A missing bracket in a print statement could also cause a syntax error.
+
+
+
+Logical error:
+
+Logical error is one where the program does not crash but produces an incorrect outcome. Let's take an example:
+
+def addition(a,b):
+    return a-b
+ 
+result = addition(5,3)
+print(result)
+The above program works without crashing but produces an incorrect result. Logical errors occur because of incorrect logic, calculation, or decision-making.
+
+Such logical errors are hard to fix because you don't exactly know what causes the error. When you have a large codebase, finding logical errors is an extremely difficult task. To find logical errors, you have to find the problem on your own by finding the relevant parts of your code.
+
+
+
+Runtime error:
+
+An error that occurs while a program is executing is called a runtime error.
+
+Let's take an example of dividing two numbers.
+
+First, let's discuss the divide-by-zero error.
+
+Here's an example of code that would produce a runtime error due to a divide by zero:
+
+numerator = 10
+denominator = 0
+result = numerator/denominator
+print(result)
+This would result in a ZeroDivisionError at runtime.
+
+This is called a divide-by-zero error.
+
+
+
+Here is an example of code that would produce a runtime error due to accessing an undefined variable:
+
+x = 5
+y = z + 3
+print(x)
+print(y)
+In the above code, the variable z has not been defined, so trying to use it in the expression y = z + 3 will result in a NameError at runtime.
+
+
+
+We can avoid syntax errors by writing correct syntax.
+
+We can also avoid logical errors by testing our code with different inputs and checking if our program produces the correct result.
+
+But runtime errors are difficult to avoid.
+
+
+
+Let's say we want to accept two numbers from users, and it's not our choice to determine if the denominator is zero or not.
+
+In such cases, you will get the divide-by-zero error.
+
+Example:
+
+n = int(input('Enter numerator'))
+d = int(input('Enter denominator'))
+ 
+result = n/d
+print(result)
+To avoid this, we use something called exception handling.
+
+
+
+Exception handling:
+
+To handle exceptions, we need a way to try out a set of code to see if that causes an exception.
+
+For example, in the code below, the only line of code which might cause exception is the
+
+result = n/d
+Hence to avoid this, we can first try out this block of code and see if it gives an error.
+
+To do this, we use something called a try block.
+
+
+
+What we do is, if we take the code which might cause an exception and we place it inside the try block.
+
+Example:
+
+n = int(input('Enter numerator'))
+d = int(input('Enter denominator'))
+ 
+try:
+    result = n/d
+    print(result)
+except ZeroDivisionError:
+    # write the code we want to execute when exception occurs
+    print('Divide by zero error')
+ 
+print(result)
+Above code prompts the user to enter a numerator and a denominator.
+
+It then attempts to divide the numerator by the denominator.
+
+However, to handle any potential errors that could arise from dividing by zero, the division operation is enclosed in a try block.
+
+If a ZeroDivisionError exception is raised, which occurs when the denominator is zero, the code in the except block is executed.
+
+In this case, the code will print a message saying that there was a divide by zero error.
+
+Finally, the result of the division is printed, whether or not an exception occurred.
