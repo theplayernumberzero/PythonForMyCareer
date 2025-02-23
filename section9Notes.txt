@@ -1,0 +1,209 @@
+Section Notes
+Lambdas in Python:
+
+
+
+Lambdas are similar to functions, but unlike functions, they don't have names.
+
+To understand lambdas, let's first take the example of a regular function.
+
+We will write a function to calculate the square of a number.
+
+def square(x):
+    return x**2
+ 
+print(square(9))
+
+
+Now, let's implement the above code by using a lambda. To create a lambda, we first use the keyword "lambda".
+
+# create a lambda
+# use lambda keyword
+# define a variable x, which is our parameter
+# give a colon
+# define a mathematical expression
+# enclose the lambda in parentheses
+# pass in the parameter in another parentheses
+result = (lambda x: x**2)(7)
+print(result)
+
+
+In lambdas, we don't have any name, which is why they are also called anonymous functions. Also, lambdas don't have a return statement.
+
+
+
+Creating lambdas with two arguments:
+
+result = (lambda x, y: x+y)(2, 3)
+print(result)
+
+
+Just like regular functions, we can pass different types of arguments to lambdas, such as positional arguments and keyword arguments.
+
+Here's an example of passing keyword arguments to the above lambda function:
+
+result = (lambda x, y: x+y)(y=2, x=3)
+print(result)
+
+
+You can also pass default parameters as well:
+
+result = (lambda x=20, y=10: x+y)(y=2)
+print(result)
+
+
+Map in Python:
+
+When dealing with an iterable like a list, we typically use a while or for loop to manipulate each item in the list.
+
+However, Python provides a function called "map" that allows us to process and transform all items in an iterable without using any loops.
+
+To better understand this, let's consider a simple example where we have a list of numbers and need to calculate the square of each number.
+
+Initially, we can achieve this using a regular function and a for loop as shown in the following code:
+
+# Create a list of numbers
+numbers = [1, 2, 3, 4, 5]
+ 
+# Define a function to calculate the square of a number
+def square(x):
+    return x * x
+ 
+# Iterate through each number and calculate its square
+for number in numbers:
+    print(square(number))
+
+
+Now, let's assume that we do not want to use a loop. Instead, we can use the map function to apply a specific function to a given iterable.
+
+Here is an example of how we can implement the above code using map:
+
+# Create a list of numbers
+numbers = [1, 2, 3, 4, 5]
+ 
+# Define a function to calculate the square of a number
+def square(x):
+    return x * x
+ 
+# Map the square function to each number in the list
+# The map function takes two parameters: the function to apply and the iterable to apply it on
+# It returns a map object, which can be converted to a list if required
+new_list = list(map(square, numbers))
+print(new_list)
+Using the map function offers several advantages.
+
+Firstly, the map function in Python is written in C programming language, which makes it more efficient than a regular Python loop.
+
+Secondly, using map is more memory efficient since only one item of the list is stored in memory at a time as compared to a regular Python loop where the entire list is stored in memory.
+
+Therefore, it is recommended to use the map function instead of a regular loop whenever possible.
+
+
+
+Using map in different ways:
+
+Let's say a list contains a set of numbers but in string format. You could convert them into integers using map. Here is the code:
+
+numbers = ["1","2","3","4","5"]
+print(numbers)
+new_list = list(map(int,numbers))
+print(new_list)
+
+
+In the above code, we have used the built-in int() function, which converts strings to integers. You can also use lambda functions instead of regular functions. Let's take an example.
+
+
+
+Let's say you have a list of product prices, and you want to apply a 5% discount on each product. Here is the code:
+
+prices =[100,200,300,400,500]
+ 
+new_prices = list(map(lambda x: x - x*5/100,prices))
+print(new_prices)
+
+
+You can also use lambdas with string methods. Let's say we have a list of names entered by users on our site, and we want to capitalize them all. Here is the code to do that:
+
+names = ['john','rob','mike']
+# capitalize first letter of every name
+cap_names = list(map(str.capitalize,names))
+print(cap_names)
+# capitalize ever letter of the name
+all_caps_names = list(map(str.upper,names))
+print(all_caps_names)
+
+
+Filter in Python:
+
+Filter is a built-in function in Python that allows you to filter out items from an iterable like a list.
+
+It applies a boolean function to an iterable and generates another iterable containing the items that satisfy the given boolean condition.
+
+
+
+For example, suppose you have a list that contains numbers, and you want to get only odd numbers from that list. You can write a loop to do so:
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+odd_nums = []
+for num in nums:
+    if num % 2 == 1:
+        odd_nums.append(num)
+print(odd_nums)
+
+
+Alternatively, you can use the filter function to achieve the same result.
+
+The first parameter you pass to the filter function is the filtering function, and the second parameter is the iterable from which you want to filter out items.
+
+This iterable could be a list, tuple, or set. This function filters out unwanted elements from the list:
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+def odd(x):
+    if x % 2 == 1:
+        return x
+odd_nums = list(filter(odd, nums))
+print(odd_nums)
+
+
+You can also use a lambda function to write the above function more concisely:
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+odd_nums = list(filter(lambda x: x % 2 == 1, nums))
+print(odd_nums)
+
+
+Generators in Python:
+
+Generators, or generator functions, are a special kind of function in Python that return an iterator. Therefore, they are similar to lists, but while lists store their contents in memory, generators do not. Also, generators do not allow indexing like lists.
+
+To create a generator, we need to create a function, which is called a generator function.
+
+A regular function contains a return statement, while a generator function contains a yield statement instead of a return statement.
+
+Let’s say we want to create an iterable from 0 to 10 using a generator. We can write a generator function as follows:
+
+def function():
+    counter = 0
+    while counter<=10:
+        yield counter
+        counter+=1
+ 
+print(function()) # This creates a generator object
+print(list(function())) # As this is an iterator, we pass it to a list
+In the above code, the yield statement returns a generator object.
+
+Inside a program, when you call a function that has a yield statement, as soon as a yield is encountered, the execution of the function stops and returns an object of the generator to the function caller.
+
+A function that contains a yield keyword is known as a generator function.
+
+Let’s take another example of a generator function that creates a list of even numbers in a specified range:
+
+def even_generator(x):
+    for i in range(x):
+        if i%2==0:
+            yield i
+ 
+print(list(even_generator(10)))
+In the above code, we used the yield statement to return only the even numbers in the specified range, making it more efficient than creating a list of all the numbers in that range and then filtering out the even numbers.
