@@ -1,0 +1,197 @@
+Section Notes
+Regular expressions in Python:
+
+A regular expression is a sequence of characters that defines a pattern to search for within a string.
+
+For example, consider an email address like "abc@gmail.com".
+
+We can differentiate between an email address and a username because they follow a particular pattern.
+
+Regular expressions can be used to search for specific patterns in a document or a string of text.
+
+Before we delve further into regular expressions, it's essential to understand what a raw string is.
+
+A raw string is also known as a pure string, which means that any character in the string is treated as a string and nothing else.
+
+
+
+In other words, a raw string cannot have special characters like the backslash (). For example, if we use the code:
+
+print('\n hey there')
+It will print "hey there" on a new line because the backslash () is treated as a special character.
+
+However, we can make it a raw string by adding an "r" before it:
+
+print(r'\n hey there')
+This way, the backslash () will not be treated as a special character, but it will be considered a raw string.
+
+
+
+Search & match methods:
+
+Let's say you want to create strings that follow a certain pattern.
+
+This can be done with the help of a regular expression. For instance, if you want to create emails, you can write a pattern and generate random emails from that pattern.
+
+Regular expressions are not only used in Python, but they can also be used to search and replace a particular set of strings in a code editor like Sublime or Atom.
+
+In text editors, you can perform a simple search by searching for a word, or you can write a regular expression to search for strings that match a particular pattern.
+
+While working with regular expressions, we have two things: a pattern and a string. A string can match a pattern or it may not. Let's take a simple example. Firstly, to use the re module, we need to import it.
+
+import re
+This re module has two main methods which we will be discussing: re.match and re.search. First, let's understand re.match. The match method accepts two parameters, the repattern and the string. The match method checks for a match only at the beginning of the string.
+
+
+
+Let's write some code to search for a simple pattern.
+
+pythonCopy code
+import re
+ 
+pattern = "a"
+string = "abc"
+ 
+if re.match(pattern, string):
+    print('match found')
+else:
+    print('no match found')
+This will return us match found because the pattern matches with the string. Now, what if we change the string to babc? This will give us no match found because the match method starts matching the pattern from the beginning of the string.
+
+
+
+Now let's talk about the re.search method. This method looks for the presence of the pattern across the entire string. So now, if we replace re.match with re.search, we get match found. Here is the code:
+
+pythonCopy code
+import re
+ 
+pattern = "a"
+string = "abc"
+ 
+if re.search(pattern, string):
+    print('match found')
+else:
+    print('no match found')
+
+
+Meta characters in regular expressions:
+
+In regular expressions, meta characters are special characters that have a meaning beyond their literal interpretation.
+
+They are used to define the search pattern in a regular expression. In Python, regular expressions are created using the re module.
+
+Some of the commonly used meta characters in Python regular expressions are:
+
+. (dot) - matches any single character except for a newline character
+
+^ (caret) - matches the beginning of a string
+
+$ (dollar sign) - matches the end of a string
+
+* (asterisk) - matches zero or more occurrences of the preceding character
+
++ (plus sign) - matches one or more occurrences of the preceding character
+
+? (question mark) - matches zero or one occurrence of the preceding character
+
+{m} - matches exactly m occurrences of the preceding character
+
+{m, n} - matches between m and n occurrences of the preceding character
+
+[] (square brackets) - matches any single character within the brackets
+
+
+
+These meta characters are used in regular expressions to create powerful search patterns that can match specific strings with varying degrees of flexibility.
+
+
+
+* Metacharacter:
+
+The asterisk (*) metacharacter in regular expression refers to a quantifier that matches zero or more occurrences of the preceding character or group.
+
+This means that the preceding character or group may appear zero times or any number of times in the string and still be considered a match.
+
+For example, the regular expression "ab*" will match any string that has an "a" followed by zero or more "b"s. So it will match "a", "ab", "abb", "abbb", and so on.
+
+Here are a few more examples of how the asterisk metacharacter can be used in regular expressions:
+
+"a*b" will match any string that has an "a" followed by zero or more characters, and then a "b". So it will match "b", "ab", "aab", "aaab", and so on.
+
+"a.*b" will match any string that has an "a" followed by any number of characters, and then a "b". So it will match "ab", "acb", "a123b", and so on.
+
+
+
++ Metacharacter:
+
+The + metacharacter in regular expression refers to the one or more occurrences of the preceding character or group.
+
+It means that the preceding character or group must appear one or more times in the input string for the regular expression to match.
+
+For example, the regular expression a+ matches one or more occurrences of the letter "a" in the input string.
+
+So, it would match "a", "aa", "aaa", and so on. However, it would not match "b" or any other character that is not "a".
+
+
+
+{} Metacharacter
+
+In regular expressions, the curly braces {} are used as a metacharacter to indicate repetition of the preceding character or group.
+
+For example, the regular expression "a{3}" matches exactly three consecutive occurrences of the character "a".
+
+Similarly, the regular expression "a{2,5}" matches a string with at least two and at most five consecutive occurrences of the character "a".
+
+Here are some examples of how to use the curly braces {} in regular expressions:
+
+"a{3}" matches "aaa"
+
+"a{2,5}" matches "aa", "aaa", "aaaa", or "aaaaa"
+
+"a{3,}" matches "aaa", "aaaa", "aaaaa", and so on
+
+"a{,5}" matches the empty string "", "a", "aa", "aaa", "aaaa", or "aaaaa"
+
+The curly braces {} can also be used with character classes, such as "[a-z]{3}" to match three consecutive lowercase letters, or with groups, such as "(ab){2,3}" to match either "abab", "ababab", or "abababab".
+
+
+
+. Metacharacter
+
+In regular expressions, the . metacharacter matches any single character except for a newline character.
+
+It's also known as a wildcard character because it can match any character.
+
+For example, the regular expression a.c would match the strings "abc", "axc", "a5c", and so on, because the . can match any character between "a" and "c".
+
+However, it would not match the string "acd" because there is no character between "c" and "d" for the . to match.
+
+It's important to note that the . only matches a single character, so if you want to match multiple characters you would need to use a quantifier like *, +, or {n,m}.
+
+
+
+
+
+? Metacharacter
+
+In regular expressions, the ? metacharacter is used to match the preceding character or group zero or one times. It makes the preceding character or group optional.
+
+For example, if we want to match a string that can have an optional 's' at the end, we can use the ? metacharacter.
+
+
+
+^ Metacharacter
+
+In regular expressions, the "^" metacharacter is used to match the beginning of a string. It is also known as the "caret" character.
+
+For example, the pattern "^hello" would match any string that starts with "hello". Here are some examples:
+
+"^a": matches any string that starts with "a"
+
+"^1": matches any string that starts with "1"
+
+"^the": matches any string that starts with "the"
+
+"^$": matches an empty string (since it starts at the beginning)
+
+Note that the "^" metacharacter only matches the beginning of a string, not the beginning of a line. To match the beginning of a line, you can use the "\A" metacharacter instead.
