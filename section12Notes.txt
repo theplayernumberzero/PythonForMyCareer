@@ -1,0 +1,300 @@
+Section Notes
+What is Tkinter?
+
+Until now, we have built command-line programs that accept input from the console.
+
+However, users nowadays expect modern applications that they can interact with.
+
+Tkinter is a library that enables us to build desktop apps in Python with a graphical user interface that users can interact with, unlike the command-line interface.
+
+Tkinter is built into the standard Python library and is cross-platform, meaning that the same code will work on Windows, Mac, and Linux.
+
+The buttons, text fields, and all the widgets built using Tkinter are rendered using native operating system elements.
+
+Therefore, your Tkinter app will have a Windows app look on a Windows app, a Mac-like look and feel on a Mac, and so on.
+
+Although Tkinter apps look outdated in terms of the user interface, you cannot build modern-looking apps using Tkinter.
+
+However, for commercial desktop applications, Tkinter is lightweight, and the modern look of the application does not matter as much.
+
+
+
+Creating a simple Tkinter window:
+
+
+
+#import everything form tkinter
+from tkinter import *
+# Now in tkinter there is a class Tk
+# we create an object of the class Tk()
+ 
+root=Tk()
+# This root is now our main window
+# root is an instance of the Tk class
+# run the code and nothing will happen
+# because tkinter craetes the window and it closes in a flash
+# hence to keep the window running, we use mainloop method.
+# as the name implies, it will loop forever until the user exits
+# the window 
+root.mainloop()
+
+
+Tkinter window with "Hello World" displayed on it:
+
+from tkinter import *
+ 
+root=Tk()
+hello = Label(root,text="hello world")
+#this won't do anything, just create a label
+#after creating a label, we need to add it.
+hello.pack()
+# When you pack a widget into a window, tkinter resizes the window
+# to be as small as it can be to fit all the widgets it has.
+root.mainloop()
+You can also set the size of the window:
+
+root.geometry("300x400")
+
+
+Configuring the Label widget using parameters:
+
+hello = Label(root,text="hello world",font=("Arial", 16), fg="red", bg="white")
+
+
+
+
+Creating a button widget in Tkinter:
+
+button = Button(root,text="Click here")
+button.pack()
+When you click this nothing happens.
+
+
+
+To handle a click event on a button, we need to use a proerty called command.
+
+button = Button(root,text="Click here",command=display)
+
+
+Define the display function at the top before the root=Tk()
+
+i.e before the Tkinter loop starts.
+
+def display():
+    print('This is a display message')
+
+
+Tkinter app to accept user Input:
+
+In tkinter, we use the Entry widget to accept any input from the user.
+
+from tkinter import *
+ 
+def display():
+    print(entry.get())
+ 
+root=Tk()
+hello = Label(root,text="Enter some text")
+hello.pack()
+ 
+entry = Entry(root)
+entry.pack()
+button = Button(root,text="Click here",command=display)
+button.pack()
+ 
+root.geometry("300x400")
+root.mainloop()
+
+
+Tkinter program to accept two numbers and add them:
+
+from tkinter import *
+ 
+def add():
+    n1 = int(number1.get())
+    n2 = int(number2.get())
+    print(n1+n2)
+ 
+root=Tk()
+hello = Label(root,text="Enter some text")
+hello.pack()
+ 
+number1 = Entry(root)
+number1.pack()
+ 
+number2= Entry(root)
+number2.pack()
+button = Button(root,text="Click here",command=add)
+button.pack()
+ 
+root.geometry("300x400")
+root.mainloop()
+Let’s display the number onto a label
+
+from tkinter import *
+ 
+def add():
+    n1 = int(number1.get())
+    n2 = int(number2.get())
+# new code added
+    result = str(n1+n2)
+    answer.config(text="Answer is: "+ result)
+# new code added
+root=Tk()
+hello = Label(root,text="Enter some text")
+hello.pack()
+ 
+number1 = Entry(root)
+number1.pack()
+ 
+number2= Entry(root)
+number2.pack()
+button = Button(root,text="Click here",command=add)
+button.pack()
+ 
+# new code added
+answer = Label(root)
+answer.pack()
+# new code added
+ 
+root.geometry("300x400")
+root.mainloop()
+
+
+Checkboxes in Tkinter:
+
+Checkboxes in Tkinter are called as check button.
+
+Checkboxes are used to show multiple options to user.
+
+User can select multiple options from checkboxes.
+
+Example:
+
+from tkinter import *
+ 
+def selected():
+    label.config(text=var.get())
+ 
+root=Tk()
+# create a variable to store checkbox state
+var = BooleanVar()
+checkbox = Checkbutton(root,text ="Accept terms", variable=var, command=selected)
+checkbox.pack()
+ 
+label=Label(root)
+label.pack()
+root.geometry("300x400")
+root.mainloop()
+
+
+Frames in Tkinter:
+
+Frame is a widget that allows you to organize the layout of other widgets.
+
+Let's create a frame and add widgets to it. A frame is like a container that will hold all our widgets. Therefore, a window is also a container, and inside a window, we will add a frame. On that frame, we will add widgets.
+
+A frame allows you to group together widgets of the same type. Let's take the boilerplate code and understand how frames are created.
+
+from tkinter import *
+ 
+root = Tk()
+root.geometry("300x400")
+ 
+# create a frame object
+frame = Frame(root)
+frame.pack()
+ 
+# now let's create another frame
+frame2 = Frame(root)
+frame2.pack()
+ 
+# now let's create some widgets and add them to a frame
+# instead of adding it to the root window, we will pass frame here
+button1 = Button(frame, text="Button1")
+button2 = Button(frame2, text="button2")
+ 
+# we still need to pack these buttons
+button1.pack()
+button2.pack()
+ 
+root.mainloop()
+
+
+Now let's change the layout of one of the frames. Let's say you want to place that frame at the bottom of the window. Here is how to do it:
+
+frame2.pack(side=BOTTOM)
+This places frame2 and all the elements inside it at the very bottom of the window.
+
+
+
+Grid layout manager:
+
+A grid is nothing but a set of rows and columns.
+
+When you want to place widgets inside of a window, you simply specify the rows and columns for that widget.
+
+Let’s create a basic form with two labels and two textFields and place them in a form like manner using grid layout.
+
+from tkinter import *
+ 
+root=Tk()
+ 
+label1 = Label(root,text='Email')
+label2 = Label(root,text="Password")
+ 
+text1 = Entry(root)
+text2 = Entry(root)
+ 
+label1.grid(row=0,column=0)
+label2.grid(row=1,column=0)
+ 
+text1.grid(row=0,column=1)
+text2.grid(row=1,column=1)
+ 
+button = Button(root,text='Login')
+button.grid(row=2,column=1)
+root.geometry("300x400")
+root.mainloop()
+
+
+OOP way of writing Tkinter app:
+
+Previously we were creating the root window and then adding widgets and frames on top of it.
+
+Same can be done using OOP as well.
+
+Let’s create user interface having a window and two buttons which perform some functions.
+
+from tkinter import *
+ 
+class Demo:
+    # init method to initialize the window object
+    # we have passed in rootone which is the root
+    # rootone is simply the name of parameter passed to init
+ 
+    def __init__(self,rootone):
+        #This will contain the code used to setup our window
+        # lets add a frame on the root window
+        frame = Frame(rootone)
+        frame.pack()
+        #as this is a class instead of saying printbutton we use self
+ 
+        self.printbutton = Button(frame,text='Click Here',command=self.printmessage)
+        self.printbutton.pack()
+ 
+        #frame.quit is a built-in method to close a window
+        self.quitbutton = Button(frame,text='Exit',command=frame.quit)
+        self.quitbutton.pack()
+ 
+    #now let's define the method printmessage here
+    def printmessage(self):
+        print("Button Clicked!")
+    # now once class is created, we create an object out of it
+ 
+root=Tk()
+# create an object of the above class
+# pass in this above root to the class
+b = Demo(root)
+ 
+root.mainloop()
