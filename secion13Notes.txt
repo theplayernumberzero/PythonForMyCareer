@@ -1,0 +1,2470 @@
+Lecture : Intro to data analysis
+Data analysis is the process of examining, cleansing, transforming, and modeling data with the goal of discovering useful information, informing conclusions, and supporting decision-making. This process involves a series of steps that allow analysts or researchers to take raw data and convert it into insights or knowledge that can be used to understand patterns, trends, or relationships within the data.
+
+Data Collection: Gathering data from various sources, which could include databases, surveys, experiments, or any other means of obtaining data relevant to the research question or business problem.
+
+Data Cleaning: Identifying and correcting errors or inconsistencies in the data, such as missing values, duplicate records, or outliers, to ensure the quality and reliability of the analysis.
+
+Data Exploration: Using statistical techniques and visualization tools to understand the basic properties of the data, identify patterns or anomalies, and formulate hypotheses for deeper investigation.
+
+Data Transformation: Modifying data to facilitate analysis, which may involve normalizing data, creating new variables, or transforming variables to better reveal the underlying structures in the data.
+
+Data Modeling: Applying statistical, machine learning, or other mathematical models to the data in order to test hypotheses, make predictions, or uncover relationships between variables.
+
+Interpretation and Communication: Drawing conclusions from the analysis, evaluating the implications of the findings, and effectively communicating the results to stakeholders through reports, visualizations, or presentations.
+
+
+
+Data analysis is required for a multitude of reasons across various domains, each benefiting from the ability to make informed decisions based on empirical evidence and insights. Here are some key reasons why data analysis is indispensable:
+
+Informed Decision Making: One of the primary reasons for data analysis is to provide a solid foundation for making decisions. By analyzing data, businesses, governments, and organizations can make choices that are backed by data rather than intuition or assumptions, leading to better outcomes.
+
+Identifying Trends and Patterns: Data analysis helps in spotting trends and patterns that might not be evident through simple observation. This can be crucial for businesses to understand market dynamics, customer behavior, and product performance, enabling them to anticipate changes and adapt strategies accordingly.
+
+Improving Efficiency and Performance: Through the analysis of operational data, organizations can identify inefficiencies in their processes and opportunities for optimization. This can lead to cost savings, improved productivity, and enhanced overall performance.
+
+Problem Solving: Data analysis is essential for diagnosing issues and understanding the root causes of problems within an organization or system. By examining the relevant data, analysts can pinpoint the factors contributing to a problem and suggest effective solutions.
+
+Innovation and Development: Analyzing data can reveal gaps in the market or opportunities for innovation, guiding the development of new products, services, or technologies that meet unaddressed needs or enhance existing offerings.
+
+Risk Management: Data analysis enables organizations to assess risks and uncertainties more accurately. By understanding the likelihood and potential impact of various risks, they can devise strategies to mitigate these risks and make more resilient plans.
+
+Enhancing Customer Experience: Businesses use data analysis to understand customer preferences, behaviors, and feedback, allowing them to tailor products, services, and interactions to better meet customer needs and improve satisfaction.
+
+Regulatory Compliance: In many industries, organizations must comply with regulatory requirements that mandate the collection, analysis, and reporting of data to ensure transparency, safety, and fairness. Data analysis is crucial for meeting these compliance obligations.
+
+
+
+Lecture : Data Analysis v/s Machine Learning v/s AI
+Data analysis, machine learning, and artificial intelligence (AI) are interrelated fields, each with its own focus and methodologies, but they often work together to extract insights from data and automate decision-making processes. Here's a breakdown of each field and how they relate to each other:
+
+Data Analysis
+Focus: Data analysis involves examining, cleaning, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making. It's the process of digging into data to extract meaningful insights, such as trends, patterns, and relationships.
+
+Methodologies: It includes statistical analysis, visualization, data mining, and the initial steps of data preprocessing.
+
+Application: Data analysis is used in virtually every field to inform policy-making, business strategies, research conclusions, etc. It's a more manual, hands-on approach to understanding data and typically requires human interpretation.
+
+Machine Learning (ML)
+Focus: Machine learning is a subset of AI that focuses on building systems that learn from data. Instead of being explicitly programmed to perform a task, these systems are trained using large amounts of data and algorithms that enable them to learn how to perform the task.
+
+Methodologies: It includes supervised learning, unsupervised learning, reinforcement learning, and deep learning. Machine learning models are trained on datasets to identify patterns and make predictions or decisions based on new data.
+
+Application: Machine learning is used for predictive analytics, speech recognition, image recognition, and many other tasks that require the interpretation of complex data sets. It automates the extraction of insights from data.
+
+Artificial Intelligence (AI)
+Focus: AI is a broader concept that refers to machines or systems capable of performing tasks that typically require human intelligence. This includes reasoning, learning, perception, and natural language understanding.
+
+Methodologies: AI encompasses machine learning, deep learning, natural language processing (NLP), robotics, and more. It involves creating algorithms that enable machines to mimic human cognitive functions.
+
+Application: AI applications range from virtual assistants and chatbots to autonomous vehicles and sophisticated decision-making systems. AI aims to create systems that can operate intelligently and independently.
+
+Relationship and Differences
+Data Analysis vs Machine Learning: Data analysis is primarily concerned with extracting insights from data, often requiring human interpretation and decision-making. Machine learning, on the other hand, automates the extraction of insights by learning from data patterns and making predictions or decisions without human intervention.
+
+Machine Learning as a subset of AI: Machine learning is a core part of AI, focusing specifically on algorithms that allow computers to learn from and make decisions based on data. AI includes machine learning but also encompasses other technologies that enable machines to perform tasks that would normally require human intelligence.
+
+AI as the broader goal: AI represents the broader goal of creating intelligent machines. Machine learning is a means towards achieving AI by providing systems the ability to automatically learn and improve from experience. Data analysis techniques can be used within machine learning to understand and preprocess the data fed into these systems.
+
+
+
+Lecture: Python For Data Analysis
+Why use Python for data analysis ?
+
+Ease of Learning and Use: Python's syntax is clear, intuitive, and closer to everyday English language, making it accessible to beginners and experts alike. This ease of use allows data analysts to quickly write reliable code for data manipulation and analysis.
+
+Extensive Libraries and Frameworks: Python boasts a rich ecosystem of libraries and frameworks designed specifically for data analysis, data visualization, machine learning, and scientific computing. Key libraries like NumPy for numerical computations, pandas for data manipulation, Matplotlib and Seaborn for data visualization, and Scikit-learn for machine learning make it highly versatile and powerful for data analysis tasks.
+
+Support for Multiple Paradigms: Python supports object-oriented, procedural, and functional programming paradigms, giving data scientists and analysts flexibility in how they approach their data analysis tasks.
+
+Community and Ecosystem: Python has a large and active community, which means that there is a vast amount of resources available for learning and troubleshooting, including forums, tutorials, and documentation. The community also contributes to the development and maintenance of a wide range of data analysis and machine learning libraries.
+
+Integration and Compatibility: Python can easily be integrated with other languages and technologies, and it runs on all major operating systems. It can interface with databases, conduct complex data analysis, and integrate with data visualization tools and web applications.
+
+Scalability and Versatility: Python is scalable and can handle large volumes of data, which is essential for data analysis. Its versatility allows it to be used in various stages of data analysis and processing, from data cleaning and exploration to building and deploying predictive models.
+
+Data Visualization: Python's data visualization libraries, such as Matplotlib, Seaborn, and Plotly, allow for the creation of a wide range of static, interactive, and animated visualizations. This makes it easier to communicate findings and insights from the data.
+
+Open Source: Python is open source, which means it is free to use and distribute, including for commercial purposes. This has contributed to its widespread adoption and continuous improvement by a global community of contributors.
+
+
+
+Lecture: Installing Jupyter Notebook
+Install jupyter notebook:
+
+pip install notebook
+Running jupyter notebook:
+
+jupyter notebook
+
+
+Lecture: Introduction To Numpy
+To perform data analysis, we need to use a couple of packages, libraries and tools.
+
+We will first start by learning Numpy.
+
+What is numpy?
+
+Stands for numerical Python.
+
+Python package for scientific computing.
+
+Provides support for large multi dimensional arrays and matrices.
+
+Also provides a collection of mathematical functions to operate on those arrays efficiently.
+
+You can create arrays using Python lists as well but Numy arrays are more efficient in terms of storage and performance..
+
+Numpy is not just an essential tool for data analysis but also for machine learning as well.
+
+Numpy’s key features:
+
+Efficient array computing: At core of Numpy is the ‘ndarray’ object. ndarray is a dimensional array and it also provides vectorised arithmetic operations. In a regular python array made up of lists you would have to write a for loop but with ndarrays you don’t have to do that.
+
+Broadcasting: NumPy supports broadcasting, it is a powerful mechanism using which we can work with arrays of different shape while performing arithmetic operations. This approach is much faster compared to using Python for loops.
+
+Mathematical functions: Numpy provides a comprehensive set of mathematical functions to perform computations on arrays. These functions are also optimised for performance.
+
+Integration with other libraries: Other libraries such pas pandas, matplotlib, sci-py and scikit-learn are built on top of Numpy, they rely on numpy for numerical operations.
+
+Cross-platform and open source: Numpy is available on all major operating systems .
+
+
+
+Lecture: Creating a Numpy Array
+As earlier mentioned, we use Numpy so that we could create high perfofrmant arrays.
+
+We do this using the ndarray provided by numpy.
+
+Let’s now learn how to create an array in numpy.
+
+import numpy as np
+# creating a one dimentional array
+arr = np.array([1,2,3,4,5])
+arr
+Creating a numpy array from an already existing Python list:
+
+# Creating a numpy array from an already existing Python list
+prices = [10,20,30,40]
+prices_array = np.array(prices)
+prices_array
+Creating array out of strings
+
+# Creating array out of strings
+names = ['John','Matt','Rob']
+names_array = np.array(names)
+names_array
+Creating a multi-dimensional array
+
+#Creating a multi-dimensional array
+multi_array = np.array([[1,2,3],[4,5,6]])
+multi_array
+Checking dimensions of an array:
+
+#Check the dimensions of an array
+multi_array.ndim
+
+
+Lecture: Creating Array & Type Conversion
+Checking data type of an array:
+
+#Check the data type of an array
+multi_array.dtype
+Automated way of creating an array:
+
+#Automated way of creating an array
+import numpy as np
+auto_array = np.zeros(10)
+auto_array
+Defining data type while creating an array:
+
+# Defining data type while creating an array
+arr = np.array([1,2,3,4],dtype=np.float64)
+arr
+Changing data type of an array:
+
+# now let's convert above array to an int data type
+arr = arr.astype(np.int64)
+arr
+
+
+Lecture: Arithmetic Operations on Array
+Let’s create two multi-dimensional arrays and perform math operations between them.
+
+Let’s create two arrays and perform addition:
+
+# Arithmetic operations with numpy array
+import numpy as np
+list_a = [[1,2,3],[4,5,6]]
+list_b = [[7,8,9],[10,11,12]]
+array_a = np.array(list_a)
+array_b = np.array(list_b)
+array_a
+array_b
+#adding two arrays
+array_a + array_b
+In this addition operation, each element at a given row and column position in array a got added with each element at the same row and column position in array b.
+
+The advantage of using Numpy is that we did not had to write any for loops to loop through every single element of the array.
+
+Let’s also perform subtraction as well:
+
+array_b - array_a
+Now let’s multiply an array with a scalar quantity.
+
+#multiply an array with a scalar quantity
+array_a * 20
+In this case, each value inside the array gets multiplied by the scalar quantity
+
+Let’s try performing scalar division:
+
+# Scalar division
+array_b / 10
+We could also calculate exponent as well:
+
+# Calculating square
+array_a ** 2
+
+
+Lecture: Comparing Arrays
+Let’s now also try to compare two arrays:
+
+# Compating two arrays
+array_a > array_b
+array_b > array_a
+Boolean comparison will check and compare each value at a row and column position.
+
+
+
+Lecture: Indexing & Slicing Array
+Indexing an array means accessing element of an array using index.
+
+When we create an array there is always going to be an index position associated with that array.
+
+Let’s take an example to understand this:
+
+#Indexing and slicing an array
+import numpy as np
+arr = np.array([10,20,30,40,50])
+arr
+Elements are placed at different index positions and position starts from zero.
+
+To access an element we say:
+
+arr[1]
+Now let’s understand how a 2-dimensional array can be indexed.
+
+
+
+arr = np.array([[1,2,3],[4,5,6]])
+arr
+Let’s try accessing this array with just 1 index and see what do we get:
+
+arr[0]
+This gives us the first list
+
+Now let’s do:
+
+arr[1]
+This gives us the entire second list
+
+Now if I want to get the First element of the first list, I have to do:
+
+arr[0,0]
+You can also write it as:
+
+arr[0][0]
+Now let’s index it using other index positions:
+
+arr[0,0]
+arr[0,1]
+arr[1,1]
+Now let’s learn about slicing an array.
+
+Slicing a numpy array is similar to slicing a Python list:
+
+Let’s say you want to slice this array from index 1 to 4
+
+arr = np.array([10,20,30,40,50,60,70])
+arr[1:5]
+# Slices array from index 1 to 4
+So if you have understood how to slice a Python list you can easily understand how it works with a numpy array.
+
+Slicing a multi-dimensional array
+
+# Slicing a multi-dimensional array
+multi_array = np.array([[1,2,3],[4,5,6],[7,8,9]])
+multi_array
+# Accessing a slice which contains 5,6,8,9
+# Syntax
+# array_name [row_index_slice,column_index_slice]
+#Let's first slice it in row
+multi_array[1:3]
+# Now let's slice the column
+multi_array[1:3,1:3]
+Now let’s try slicing the elements 1,2,4,5
+
+multi_array[0:2]
+#Now let's slice the columns as well
+multi_array[0:2,0:2]
+#This could also be written as:
+multi_array[:2,:2]
+
+
+Lecture: Fancy Indexing & Boolean Indexing
+In case of fancy indexing, instead of passing s single scalar to access array elements, we instead pass arrays of indices.
+
+Example:
+
+import numpy as np
+arr = np.array([[1,2,3],[4,5,6],[7,8,9]])
+arr
+#Let's say I want to access the corner elements like 1,3,7,9
+arr[[0,0,2,2],[0,2,0,2]]
+#This will give me elements at arr[0,0], arr[0,2], arr[2,0] and arr[2,2]
+Here instead of passing single row and column value, we pass row and column values for multiple elements using arrays.
+
+Now let’s talk about boolean indexing.
+
+Let’s say we want values greater than 5.
+
+This is how to do it:
+
+arr[arr>5]
+
+
+Lecture: Broadcasting
+We can perform arithmetic like addition etc between two arrays of shame shape but what happens when two arrays have different shape and we try to add them.
+
+Let’s take an example to understand this
+
+Let’s create two arrays of different shapes:
+
+import numpy as np
+array_a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+array_b = np.array([1,2,3])
+print(array_a)
+print(array_b)
+#Now lets add them
+array_a + array_b
+What broadcasting does it it expands array b such that it matches up with the number of elements of array a.
+
+So it will modify array b to 1,2,3 1,2,3 and 1,2,3.
+
+
+
+Lecture: Introduction To Pandas
+Most of the data we will be performing analysis on would be data from database or CSV files.
+
+This data is present in tabular format.
+
+We need to load data from databases or CSV files and in order to perform analysis on that data, we need to save this data into some sort of data structure.
+
+Pandas is a data manipulation package for tabular data.
+
+Pandas provides the data structures required to load data.
+
+It has functions for analysing, cleaning, manipulating and exploring data.
+
+Pandas is built on top of Numpy.
+
+Pandas provide two very essential data structures which allows us to work with data.
+
+These are:
+
+Series
+
+Dataframes.
+
+The series object is a one dimensional array containing a sequence of values.
+
+This is useful for single dimensional data.
+
+The data frame object is a table-like data structure that can hold heterogeneous data types for different columns.
+
+
+
+Lecture: Creating A Series
+What is a series:
+
+Series is one dimensional array like object containing a sequence of values.
+
+Let’s learn how to create a series
+
+#Pandas
+from pandas import Series
+s = Series([1,3,5,7,9])
+s
+This gives us the output with index on the left and values stored at that index to the right.
+
+We can access element at an index in a series by indexing:
+
+s[2]
+To just get the values from the series you say:
+
+s.values
+To just get the indexes we say:
+
+s.index
+You can also have your own index positions instead of the by-default index:
+
+This is how to create it:
+
+s = Series([100,200,300],index=[1,2,3])
+s
+You can also have characters as index values:
+
+s = Series([10,20,30],index=['a','b','c'])
+s
+We can also create a series from a Python dictionary
+
+This is how to do it:
+
+d = {'a':100,'b':200,'c':300,'d':400}
+d
+# Convert the above dictionary into a series
+s = Series(d)
+s
+
+
+Lecture: Methods & Attributes
+You can also invoke methods on a series, just as you can on a python list.
+
+Some of the methods you can invoke are:
+
+sum, product, meaan
+If you type in series_name. and hit the tab key, it will give you a list of all the available series methods.
+
+As series is an object, it has methods.
+
+Just like we have certain methods with a series, a series also has some attributes as well.
+
+Series methods are some functions whereas the series attributes are not actions but they define some information about the series.
+
+Let’s learn a couple of series attributes:
+
+from pandas import Series
+s = Series([10,20,30,40,50,10,20,50])
+s
+s.dtype
+s.ndim
+s.size
+s.is_unique
+s.index
+s.values
+Let’s check the type of this series:
+
+type(s.values)
+This gives us the type as numpy array, this is because Pandas uses Numpy array.
+
+
+
+Lecture: Creating A DataFrame
+Series was a data structure used for single dimensional data, however when we need to work with multi-dimensional data we need to use another data structure called the data frame.
+
+The definition of data frame is: Tabular spreadsheet like data structure which contains ordered collection of columns which can be of different data types.
+
+You can imagine dataframe to be a frame of data or you could imagine it to be a table which contains rows and columns.
+
+In series we had only one single index, but in data frame as we have rows and columns we will have two indexes.
+
+How to create a dataframe:
+
+The most common way to create a data frame is from a dictionary.
+
+#Creating a dataframe from a dictionary
+from pandas import DataFrame
+#dictionary
+people = {'name':['Jim','Rob','Tom'],'age':[22,44,55],'location':['US','UK','AUS']}
+frame = DataFrame(people)
+frame
+Now the data frame data structure is created.
+
+Data is stored in terms of rows and columns.
+
+Row index is 0,1,2 and column index i s name, age and location.
+
+You can also pre-define the sequence of columns while creating a data-frame.
+
+frame = DataFrame(people,columns=['name','location','age'])
+frame
+What happens when we try to add another column above.
+
+frame = DataFrame(people,columns=['name','location','age','salary'])
+frame
+The values for salary column would be undefined.
+
+How to retrieve data from a data frame.
+
+Let’s say you want to get all locations from the location column.
+
+This is how to do it:
+
+frame['location']
+We can also do:
+
+frame.location
+Get details of a person Rob:
+
+frame.loc[1]
+Right now the salary column is empty, let’s say we want to assign some values to this column.
+
+This is how to do it:
+
+frame.salary = 5000
+frame
+But what is you don’t want to assign a single salary to everyone.
+
+We can then use a series to add salary values:
+
+from pandas import Series
+salaries = Series([1000,2000,3000])
+#assign it to the salary column
+frame.salary = salaries
+frame
+How to delete a particular column and its entire values:
+
+del frame['salary']
+frame
+Currently we are loading simple values inside a data frame but we will soon learn how to load actual data sets in a dataframe.
+
+
+
+Lecture: Reindexing
+In real world projects we will be reading data from different sources and store them into a dataframe.
+
+Many a times the by default index value we get wont be as appropriate.
+
+Hence we must re-index that data means re-arrange the index.
+
+Let’s create a series with random index.
+
+from pandas import Series
+s = Series([10,20,30,40,50],index=['c','a','d','b','e'])
+s
+Let’s re-arrange the index:
+
+# Let's now re-ararnge the index values
+s = s.reindex(['a','b','c','d','e'])
+s
+Let’s now re-index a dataframe
+
+Let’s first create a dataframe
+
+from pandas import DataFrame
+import numpy as np
+d = DataFrame(np.arange(9).reshape((3,3)),index=['c','a','b'],columns=['apple','mango','banana'])
+d
+Let’s now re-index this:
+
+d.reindex(['a','b','c'])
+This re-indexs rows
+
+This is how to re-index columns
+
+d.reindex(columns=['mango','banana','apple'])
+
+
+Lecture: Arithmetic Operations With Fill Values
+We can also perform arithmetic with series and dataframes.
+
+But what if one series is bigger as compared to other ?
+
+Let’s create two series of different sizes:
+
+from pandas import Series
+s1 = Series([1,2,3,4,5],index=['a','b','c','d','e'])
+s2 = Series([1,2,3,4,5,6,7],index=['a','b','c','d','e','f','g'])
+s1
+Let’s now try to add them:
+
+s1+s2
+As you can see we have two undefined values at the end.
+
+The same thing happens with a dataframe as well, when the row index and the column index does not match up it will create undefined values.
+
+Let’s create two dataframes
+
+from pandas import DataFrame
+import numpy as np
+d1 = DataFrame(np.arange(12).reshape(3,4),columns=['a','b','c','d'])
+d2 = DataFrame(np.arange(16).reshape(4,4),columns=['a','b','c','d'])
+d1
+Let’s try to add them:
+
+d1 + d2
+Now this gives us some undefined values as well.
+
+To avoid getting such undefined values, instead of using normal addition we use arithmatic method with fill values:
+
+s1.add(s2,fill_value=0)
+Let’s do the same with data frames as well:
+
+d1.add(d2,fill_value=0)
+
+
+Lecture: Adding Series & Dataframe
+Let’s create a dataframe and a series:
+
+from pandas import DataFrame,Series
+s = Series([1,2,3,4])
+d = DataFrame(np.arange(8).reshape(2,4))
+s
+ 
+Let’s now subtract the series from the dataframe:
+
+d - s
+Series will be subtracted from each row in the dataframe
+
+d+s
+Now when we perform such action, broadcasting takes places in the back-end
+
+Meaning even if the series is only one-dimensional and data frame is two dimensional, it will broadcast the series onto the dataframe when the subtraction or addition operation takes place.
+
+
+
+Lecture: Function Application & Mapping
+In the process of data analysis, we perform some manipulation on data.
+
+We now need to learn how to apply some function on a dataset.
+
+Let’s create a dataframe and then let’s try mapping a function onto that dataframe.
+
+Creating a dataframe:
+
+from pandas import DataFrame
+d = DataFrame(np.arange(16).reshape(4,4))
+d
+Let’s now create a function we want to apply on this dataframe:
+
+#Creating a function
+f = lambda x: x + 10
+# applying the function to the dataframe
+d.apply(f)
+Let’s write a function to calculate square of a function
+
+f2 = lambda x: x*x
+d.apply(f2)
+
+
+Lecture: Sorting & Ranking
+Sorting or ranking means arranging the indexes in ascending or descending order.
+
+Sometimes you might get a dataset when index values are not properly sorted.
+
+Let’s create a series with unordered index:
+
+from pandas import Series
+s = Series([1,2,3,4],index=['d','c','b','a'])
+s
+The order of index is not proper.
+
+Let’s now sort it
+
+s.sort_index()
+This works for numeric index as well.
+
+Let’s sort index of a dataframe.
+
+from pandas import DataFrame
+import numpy as np
+d = DataFrame(np.arange(16).reshape(4,4),index=[3,1,4,2],columns=['d','c','b','a'])
+d
+Sorting row of a dataframe:
+
+d.sort_index()
+ 
+Sorting column of a dataframe
+
+d.sort_index(axis=1)
+Sort in descending order
+
+d.sort_index(axis=1,ascending=False)
+Sort according to values instead of index.
+
+Let’s say we have a series which consist of prices of items.
+
+prices = Series([300,200,900,500])
+prices
+Let’s sort the series on the basis of values:
+
+prices.sort_values()
+This sorts the series as per the values and not as per the index.
+
+Let’s try doing this on a dataframe.
+
+Let’s create a dataframe of product and their prices:
+
+products = DataFrame({'name':['phone','laptop','tablet'],'price':[200,300,100]})
+products
+products.sort_values(by='price')
+Sort values in a descending order:
+
+products.sort_values(by='price',ascending=False)
+
+
+Lecture: Finding Duplicate Index Values
+In some cases when you read data from a dataset the dataset might contain some duplicate index values.
+
+Such duplicate index values must be first removed when we perform data analysis.
+
+Let’s create a series with duplicate index values:
+
+from pandas import Series
+s = Series([1,2,3,4,5],index=['a','b','c','d','a'])
+s
+Check if index values are unique:
+
+# to check if values are unique
+s.index.is_unique
+Let’s try to do the same with a dataframe as well.
+
+from pandas import DataFrame
+import numpy as np
+d = DataFrame(np.arange(6).reshape(2,3),columns=[1,2,3],index=['a','a'])
+d
+Check if index values of the above dataframe are unique:
+
+d.index.is_unique
+
+
+Lecture: Statistical Methods
+When we load the data from the dataframe we want to be able to get a brief idea about the dataframe.
+
+There are some methods which we could use to obtain this information.
+
+These methods are called as summary or statistical methods.
+
+Let’s create a dataframe:
+
+d = DataFrame(np.arange(16).reshape(4,4))
+d
+#calculating sum of all values of a dataframe
+# This gives the sum of columns
+d.sum()
+# Sum of rows
+d.sum(axis=1)
+# calculate the mean value
+d.mean()
+# Calculating the number of elements
+d.count()
+#Calculating the minimum and maximum
+d.min()
+d.max()
+# Get all details of a dataframe
+d.describe() 
+
+
+Lecture: Handling Nan Values
+Missing data are those Nan values which you have in your dataset.
+
+There is a simple method called dropna method which drops nan values from any dataset.
+
+Let’s seee how dropna method works on a series:
+
+from pandas import Series
+import numpy as np
+s = Series([1,2,3,np.nan,4,np.nan,5])
+s
+Using dropna method on this series:
+
+# Dropping Nan values
+s.dropna()
+Let’s try using this on a dataframe:
+
+from pandas import DataFrame
+data = DataFrame([[1,2,3],[np.nan,np.nan,np.nan],[2,np.nan,4],[np.nan,3,np.nan]])
+data
+Let’s now try applying the dropna method to this dataframe:
+
+data.dropna()
+Entire row will be wiped out which contains even a single Nan value.
+
+To avoid this, we use a parameter called how.
+
+We say:
+
+data.dropna(how='all')
+This means we tell this method how to drop Nan values.
+
+How=’all’ means drop only those rows where all values of the row are Nan values.
+
+Now let’s learn how to use dropna method to drop columns instead of rows:
+
+Let’s add a new column which contains all Nan values:
+
+data[3]=np.nan
+data
+data.dropna(how='all',axis=1)
+Now let’s learn how to handle the remaining Nan values:
+
+Currently we were not making any changes to the original dataframe, let’s do that now:
+
+from pandas import DataFrame
+data = DataFrame([[1,2,3],[np.nan,np.nan,np.nan],[2,np.nan,4],[np.nan,3,np.nan]])
+data[3]=np.nan
+data= data.dropna(how='all')
+data= data.dropna(how='all',axis=1)
+Still there will be some Nan values, we can remove them by using the fillna method.
+
+data = data.fillna(0)
+data
+
+
+Lecture: Hierarchical Indexing
+Let’s first discuss multi indexing with a series
+
+Let’s compare and contrast simple indexing and heirarchical indexing.
+
+Simple indexing:
+
+from pandas import Series
+s = Series([10,20,30,40])
+s
+
+
+In simple indexing, you can simply access the value as:
+
+s[2]
+In heirarchial indexing, we have multiple index levels instead of a single index.
+
+We have two levels of index.
+
+How to index using hierarchial indexing.
+
+Let’s say you want to access the value 4.
+
+We hence need to specify index at both levels.
+
+we can say:
+
+d['b'][3] # To access the value 4
+Why multi-indexing or hierarchical indexing is required?
+
+Reason 1:
+
+It allows us to work with higher-dimensional data.
+
+While working with single dimensional data like a series, a single level of index is sufficient.
+
+However as you move to multi-dimensional data structure, we need to use multi-level indexing.
+
+Reason 2:
+
+It enables us to store and manipualate data with arbitrary number of dimensions in a lower dimensional data structures like a series and a dataframe.
+
+Technically a series can only be used to store 1 dimensional data, but with milti-indexing we can store 2d data in a series.
+
+Similarly we can only have 2 dimensional data in a dataframe, but with multi-indexing we can also store 3 dimensional data in a data frame.
+
+Let’s try do do that now, let’s try to create a 2D data structure using series.
+
+from pandas import Series
+import numpy as np
+d = Series(np.arange(10),index=[['a','a','b','b','b','c','c','d','e','e'],[1,2,1,2,3,1,2,1,1,2]])
+d
+Explain how the indexes are formed.
+
+To access the multi-index we say:
+
+d.index
+Partial indexing.
+
+Partial indexing allows us to select a subset of data.
+
+Let’s say we only want elements in index level C we can say:
+
+d['c']
+We can also perform slicing on this as well:
+
+d['a':'c']
+Another thing we could do with multi-indexing is we could convert this 2D series into a dataframe.
+
+This is how:
+
+d.unstack()
+We can also convert a dataframe back into a series:
+
+Let’s create a dataframe:
+
+from pandas import DataFrame
+data_frame = DataFrame(np.arange(15).reshape(5,3),index=['a','b','c','d','e'])
+data_frame
+Let’s convert it into a series:
+
+data_frame.unstack()
+
+
+Lecture: Diving Deeper Into Series
+Till now we learned the basics about series and dataframes.
+
+The goal was just to understand the very basics and not to confuse you with complex and deeper topics.
+
+But from now on, let’s dive deeper into understanding Series, DataFramea and associated methods.
+
+Passing parameters to a series.
+#Parametrs and arguments for a series
+from pandas import Series
+s = Series(['Laptop','Phone','Computer','Tablet'])
+s
+# When you create a series you can pass arguments to the Series
+# Here Series is a class and the series we created above is a series object 
+# created out of that class
+# Type Series( and then press shift+tab and parameters will appear
+Series(
+#Lets now try passing in parameters to a series
+products = ['Laptop','Phone','Computer','Tablet']
+# Passing arguments directly
+# When we pass products, the product argument automatically gets assigned to 
+#data
+Series(products)
+# We can also pass the same argument as 
+Series(data=products)
+#In this case as index is not passed to the series, as described it automatically 
+# uses product's key as index
+#Now let's pass index as well
+product_ids = [1001,1002,1003,1004]
+# Passing it positionally
+Series(products,product_ids)
+# In the above code, products automatically gets assigned to data and 
+# producut_ids automatically to index
+#We can also pass it explicitly
+Series(data=products,index=product_ids)
+#Sometimes these two approaches are combined as well, passing positional 
+#and keyword arguments
+Series(products,index=product_ids)
+
+
+Lecture: Reading Data From a File
+In real world applications we wont be creating a series instead we will be reading from the data given to us.
+
+This data could be from some database or might be present in a csv file.
+
+Let’s learn how we could load that data in our series object.
+
+CSV stands for comma separated values, it is a type of file where data is stored in a plain text format and the values are separated by a comma.
+
+Let’s now read the file using read_csv method:
+
+import pandas as pd
+fruit_prices = pd.read_csv('fruit_prices.csv')
+fruit_prices
+This gives us an output as a data frame.
+
+A series must only contain an index and a value.
+
+Hence in this case let’s assume we only want fruits, we can do it using this:
+
+import pandas as pd
+fruit_prices = pd.read_csv('fruit_prices.csv',usecols=["Fruit"])
+#usecols allows you to read only the necassary columns fmor a dataset
+# This helps us save memory and also speeds up loading process
+# Also avoids loading data which is not required for analysis
+# We can also pass column indexes to usecols as well like usecols=[0,1]
+fruit_prices
+But this still isn’t a pandas series but it is a data frame
+
+To read it as a series we use the squeeze method on the data frame created.
+
+import pandas as pd
+fruit_prices = pd.read_csv('fruit_prices.csv',usecols=["Fruit"]).squeeze("columns")
+#Squeeze function is used to reduce the dimensions of a dataframe or a series
+# Here sqeezing a dataframe will give us a series
+# squeze("Columns") to sqeeze we pass in if we want to sqeeze index or colummns
+fruit_prices
+If you squeeze a dataframe with a single column or a single row, it will give you a series.
+
+If you squeeze a series with a single value, it will return a scalar.
+
+This now gives us a proper series.
+
+If you want to use prices as values you could say:
+
+import pandas as pd
+fruit_prices = pd.read_csv('fruit_prices.csv',usecols=["RetailPrice"]).squeeze("columns")
+fruit_prices
+
+
+Lecture: Python Functions On Series
+A list is a basic Python data structure.
+
+It provides functions such as slicing and nesting, but they lack advance data manipulation capabilities of a pandas series.
+
+For complex data manipulation tasks, python lists are slower than pandas series.
+
+Even if Series is a pandas object, we can still pass it to some of the Python’s built-in functions and it would still work:
+
+import pandas as pd
+fruit_names= pd.read_csv('fruit_prices.csv',usecols=["Fruit"]).squeeze("columns")
+fruit_names
+fruit_prices =pd.read_csv('fruit_prices.csv',usecols=["RetailPrice"]).squeeze("columns")
+fruit_prices
+ 
+# Creating a Python list from a series
+names_list = list(fruit_names)
+names_list
+ 
+#Converting a series into a dictionary
+dict(fruit_names)
+ 
+#Finding lenth of a series
+len(fruit_names)
+ 
+#finding data type of a series
+type(fruit_prices)
+ 
+#sorting
+sorted(fruit_prices)
+ 
+#Using the Python's in keyword
+# In is used to check if an element is present in a list in Python
+# Same could be used for Series as well
+"Apples" in fruit_names
+# This gives us false because when we say in Series, it looks for the value in Serie's index.
+# To search for Apple in Series we say
+"Apples" in fruit_names.values
+ 
+
+
+Lecture: Indexing & Slicing A Series From A File
+# indexing using index label:
+import pandas as pd
+ 
+# Creating a Series with an explicit index
+s = pd.Series([10, 20, 30, 40], index=['a', 'b', 'c', 'd'])
+ 
+# Accessing an element using the index label
+print(s['a'])  # Output: 10
+ 
+# Slicing using index labels (note: the end label is inclusive in pandas)
+print(s['a':'c'])
+ 
+# Indexing using integer location:
+s[0]
+#Slicing using index label
+s[0:2]
+ 
+# Label based and integer based indexing using loc and iloc
+# loc is used for label based indexing where you use the index labels to select data
+# iloc is integer position based indexing where we use integer indices to select data
+ 
+#using loc:
+s.loc['a']
+s.loc['a':'c']
+ 
+#using iloc
+s.iloc[0]
+s.iloc[0:2] 
+ 
+#boolean indexing:
+s[s>20]
+ 
+#indexing with a list og labels or positions
+# using list of labels
+s[['a','c']]
+#using list of integer positions
+s.iloc[[0,2]]
+ 
+# Performing indexing and slicing on the dataframe loaded in CSV file
+# Accessing a single value
+fruit_names[0]
+# Accessing multiple values
+fruit_names[[0,1,2,3,4]]
+#Slicing
+fruit_names[10:20]
+#From 0 to 9
+fruit_names[0:10]
+#This still gives the same result
+fruit_names[:10]
+ 
+#Integer based indexing
+# When we say fruit_names[0] it looks for 
+#For a pandas DataFrame, fruit_names[0] attempts to access a column named 0. 
+#It won't access the first row or the first element of a DataFrame. It's looking for a column label.
+ 
+#But when we want to access the 1st value, in that case we say
+fruit_names.iloc[0]
+#fruit_names.iloc[0] returns the first element. In the case of a Series, it's the first value. 
+#For a DataFrame, it's the first row as a Series (each column value of that row).
+ 
+# all the operations performed above can be performed using iloc as well
+# iloc stands for intger based location indexing
+fruit_names.iloc[[1,2,3,4]]
+ 
+#Slicing using iloc
+fruit_names.iloc[10:20]
+#From 0 to 9
+fruit_names.iloc[0:10]
+#This still gives the same result
+fruit_names.iloc[:10]
+Lecture: Get method
+#Let's say you want to get a value at a specific index
+# we use iloc for that
+fruit_names.iloc[10]
+# The problem is what if you search for an index value which does not exist in the series ?
+# fruit_names[100] -> This gives you an error and the program might crash
+# To avoid this we use get method, the get method returns the same result
+# but it does not cause our code to crash if the value is not found
+fruit_names.get(10)
+# The above code works just as iloc would work
+#Now let's try accessing a value which does not exist
+fruit_names.get(100)
+# This does not cause our program to crash
+# Let's analyse the get method
+# fruit_names.get( press shift+tab
+# Second parameter in get is default, if nothing gets retuned the default value is returned
+# Let's now try setting the default value
+fruit_names.get(100,"Generic Fruit")
+#Now when the index value is not found, we get "generic fruit" as the output
+# We can program the get method to return any default value we want to
+
+
+Lecture: Altering Series Values
+fruit_names
+# Let's say we want to change an item at an inded
+fruit_names[0]="Orange"
+fruit_names
+#Change values using iloc
+fruit_names.iloc[0]="Apple"
+ 
+# Changing values at multiple index positions
+fruit_names[[1,2,3]]=["Peach","Pineapple","Watermelon"]
+fruit_names
+Change values using the label index:
+
+s = pd.Series([10, 20, 30, 40], index=['apple', 'banana', 'cherry', 'date'])
+ 
+# Change the value at a specific index label
+s.loc['banana'] = 200
+# Change values at multiple index labels
+s.loc[['apple', 'cherry']] = [1, 3]
+# Slicing with .loc to modify a range of values
+s.loc['banana':'date'] = [25, 35, 45]
+
+
+Lecture: Counting Frequency Of Values In Series Using Value Counts Method
+It returns a series containing count of unique values.
+
+Which means let’s say if your series has duplicate values for an element then it will count the number of occurrences of that element in your series.
+
+The result which we get will be in descending order such that the first element is the most frequently occurring element.
+
+fruit_names.value_counts()
+This again gives us back a series object.
+
+Where the index are the series values without duplicates.
+
+Values on the right is the frequency of an item appearing in the series.
+
+If you click on value_counts and then press shift+tab, it will give you the parameters we could set on this value_counts method.
+
+Here we have an option to sort, which is by default set to True.
+
+Let’s set it to False and see what happens.
+
+fruit_names.value_counts(sort=False)
+This time the values are not sorted as per their frequency of occurence.
+
+Another parameter we could set on this function is ascending, by default it is set to False.
+
+This means the values will be sorted in descending order.
+
+To sort in ascending order we say:
+
+fruit_names.value_counts(ascending=True)
+Another parameter is Normalise which will give you the relative frequencies of unique values:
+
+fruit_names.value_counts(normalize=True)
+This gives result as:
+
+Pineapple                                   0.048387
+Strawberries                                0.032258
+This means Pineapples are 4.8 percent of the entire series.
+
+Or we can say 4.8 percent values in our dataset are of pineapple.
+
+To understand this in a better way let’s take a simple series example.
+
+languages = ['Python','Java','C++','Python','Python','JavaScript']
+lang = Series(languages)
+lang.value_counts(normalize=True)
+This gives result as:
+
+Python        0.500000
+Java          0.166667
+C++           0.166667
+JavaScript    0.166667
+This means that 50% of our Series is Python.
+
+
+
+Lecture: Apply Method
+The apply method on pandas allows us to apply a function on every single value of a pandas series.
+
+Example:
+
+prices = [100,200,300,400,500]
+prices_series = Series(prices)
+def summer_discount(x):
+    return x - (x*0.1)
+prices_series.apply(summer_discount)
+Let’s take another example
+
+A function to check if a student is pass or fail:
+
+scores = Series([56,78,91,34,98,23,43,59])
+def pass_or_fail(num):
+    if num>=35:
+        return "Pass"
+    else:
+        return "Fail"
+scores.apply(pass_or_fail)
+# Find pass or fail number
+result =scores.apply(pass_or_fail)
+result.value_counts()
+#Finding pass or fail percentage
+result.value_counts(normalize=True)
+We can also apply built in python functions as well
+
+fruit_names
+fruit_names.apply(len)
+ 
+
+
+Lecture: Map Method
+Map method is used to map values from two series having one similar column.
+
+To perform mapping, last column of first series should be the same as index column of second series.
+
+To understand this let’s take an example:
+
+stock_symbols = {"Acme Corp":"ACMC","Anton Computers":"ANT","Maximo Consturciton":"MXC"}
+stock_prices = {"ACMC":29,"MXC":15,"ANT":48}
+symbol_series = Series(stock_symbols)
+prices_series = Series(stock_prices)
+symbol_series
+prices_series
+symbol_series.map(prices_series)
+
+
+Lecture: Loading CSV Data
+Reading data from CSV and loading into dataframe.
+
+This is how to do it:
+
+import pandas as pd
+data = pd.read_csv("data_cleaned_2021.csv")
+This is how data is loaded into a data_frame
+
+In this we observe that we already have an index column in the CSV data itself and then when we read the dataframe it creates its own index.
+
+Hence let’s change the data frames index to the index column which already exists.
+
+Whenever we have to set the index to an existing column, we use the set_index method.
+
+import pandas as pd
+data = pd.read_csv("data_cleaned_2021.csv")
+data.set_index('index',inplace=True)
+data
+Right now the index has changed, but the column name is still index.
+
+Let’s say you want to change it to something more appropriate like JobID.
+
+This is how to do it:
+
+data.index.name="Job ID"
+data
+Lecture: Getting Information About DataFrame
+Let’s now learn how to access first 10 records of the dataframe:
+
+# Gives first 5 columns
+data.head()
+# 10 columns
+data.head(10)
+# Gives last 5 columns
+data.tail()
+#Gives last 10 columns
+data.tail(10)
+To access all index values of this dataframe I can say:
+
+data.index
+To access all actual values of the dataframe I can say:
+
+data.values
+Getting the size of dataframe:
+
+data.shape
+Getting data type of each column in a data frame:
+
+data.dtypes
+Access column names of a data-frame
+
+data.columns
+Get all indexes of a dataframe:
+
+This gives the row index as well as a column index of a dataframe.
+
+data.axes
+Get information about a data frame:
+
+data.info()
+This gives you information about the number of entries database has, the number of non-null values in each column of your data frame.
+
+It will also give you the memory usage for that dataframe as well.
+
+
+
+Lecture: Selecting Required Columns
+data['Salary Estimate']
+A single column from a database which we access is a pandas series.
+
+We can check the data type of above column
+
+type(data['Salary Estimate'])
+Let’s try to select some other column:
+
+data['Location']
+# As this column name does not contain any spaces, I can also access it by saying
+data.Location
+data.Size
+Accessing multiple columns from a dataframe.
+
+Let’s suppose you are only concerned with some of the columns in the data frame.
+
+You can access them as:
+
+data[['Job Title','Salary Estimate','Company Name','Location','Size']]
+This will create a new dataframe based only on those listed columns.
+
+
+
+Lecture: Finding Salaries From Range
+Get the already present salary columns from dataframe:
+
+
+
+data[['Lower Salary','Upper Salary','Avg Salary(K)']]
+
+
+Lecture: Extracting Series & Adding
+Getting salary estimate for first entry:
+
+data['Salary Estimate'][0]
+
+
+Parsing salary
+
+string = "$53K-$91K (Glassdoor est.)"
+def parse_salary(salary_str):
+    if ":" in salary_str:
+        salary_str = salary_str.split(":")[1].strip()
+    salary_range = salary_str.split(' ')[0]
+    if "-" in salary_range:
+        min_salary_str, max_salary_str = salary_range.split('-')
+    else:
+        min_salary_str = max_salary_str = salary_range
+ 
+    def clean_and_convert(salary):
+        try:
+            return float(salary.replace('$','').split('K')[0]) * 1000
+        except ValueError:
+            return 0
+ 
+    min_salary = clean_and_convert(min_salary_str)
+    max_salary = clean_and_convert(max_salary_str)
+    
+            
+        
+    return pd.Series([min_salary,max_salary])
+parse_salary(string)
+    
+
+
+Apply this function to the salary estimate column:
+
+data['Salary Estimate'].apply(parse_salary)
+
+
+Adding New Columns To DataFrame:
+
+data[['Min Salary','Max Salary']] = data['Salary Estimate'].apply(parse_salary)
+ 
+
+
+Lecture Calculating Average Salary
+data['Average Salary']=(data['Max Salary'] + data['Min Salary'])/2
+
+
+Lecture: Finding Job Frequency Using Value Counts
+data['Job Title'].value_counts(normalize=True)*100
+
+
+Lecture: Changing Data Types
+Checking the data type for max salary column
+
+data['Max Salary'].dtype
+
+
+Changing the data type of min salary and average salary columns:
+
+data['Min Salary'] = data['Min Salary'].astype('int')
+ 
+data['Average Salary'] = data['Average Salary'].astype('int')
+
+
+
+
+Lecture: Sorting Salaries
+Sort salaries
+
+data.sort_values('Average Salary')
+data.sort_values('Average Salary',ascending=False)
+Sort as per the rating:
+
+data.sort_values('Rating',ascending=False)
+How to sort on multiple columns:
+
+data.sort_values(['Max Salary','Rating'], ascending=False)
+It wil first prioritize max salary and then rating.
+
+Let’s say you want high rating first, this is how to sort it:
+
+data.sort_values(['Rating','Max Salary'], ascending=False).head(30)
+You can also sort one column in ascending order and other once in descending:
+
+data.sort_values(['Rating','Max Salary'], ascending=[False,True]).head(30)
+
+
+Lecture: Filtering Data Conditionally
+Let’s try to get all rows which have a job title data scientist:
+
+data['Job Title']=="Data Scientist"
+This returns true for every row where job title is data scientist.
+
+But this is how to get actual rows which has data scientist as the job role:
+
+data[data['Job Title']=="Data Scientist"]
+Data for job locations new_york.
+
+Jobs with salary greater than 100k:
+
+data[data['Max Salary']>100000]
+Find companies founded after 2015
+
+data[data['Founded']>2015]
+Companies with job rating greater than 4:
+
+data[data['Rating']>4]
+
+
+Lecture: Combining Multiple Conditions
+Jobs where salary >100k and location is new york:
+
+data[(data['Location']=="New York, NY") & (data['Max Salary']>100000)]
+Data scientist jobs with salary >100k and rating>4
+
+data[(data['Rating']>4) & (data['Max Salary']>100000)]
+Also add a 3rd condition that the job location should be new york:
+
+data[(data['Rating']>4) & (data['Max Salary']>100000) &(data['Location']=="New York, NY")]
+In case of using & all the conditions should be true, if any of the condition fails it will not return that row.
+
+
+
+Lecture: Combine Conditions Using OR
+Just like using & to filter on the basis of multiple conditions, we can also use OR to add multiple conditions.
+
+But the difference is, is case of OR only any one of the condition should be true instead of all of them being true.
+
+Let’s suppose you want to find a job which either is rated above 4.5 or where pay>100k:
+
+data[(data['Rating']>4.5) | (data['Max Salary']>100000)]
+Either job role should be data scientist or location should be dallas:
+
+data[(data['Job Title']=='Data Scientist') | (data['Location']=='Dallas, TX')]
+
+
+Lecture: Find If Value Exists Using IsIn Method
+Let’s suppose you want to list all jobs that are either pressent in New York, Dallas, or SanJose.
+
+We can write this using OR:
+
+data[(data['Location']=='Dallas, TX') | (data['Location']=='New York, NY') | (data['Location']=='San Jose, CA') ]
+Rather than writing this, we can simply use the isin method and pass all the cities we want to search for.
+
+This is how to write it:
+
+b = data[data["Location"].isin(['Dallas, TX]','New York, NY','San Jose, CA'])]
+
+
+Lecture: Search Within A Range Using Between Method
+Check when a series value lies between a range.
+
+Salary range between 100k to 150k
+
+data[data['Max Salary'].between(100000,150000)]
+Rating between 4.5 and 5
+
+data[data['Rating'].between(4.5,5)]
+Companies found between 2000 to 2010
+
+data[data['Founded'].between(2000,2010)]
+
+
+Lecture: Indexing
+Let’s say you want to get access to a row, you can simply do that by using the index label.
+
+For example:
+
+data.loc[0]
+This is called label based indexing, because here 0 index value is used as a label.
+
+Another method is integer location based indexing.
+
+In this case the row is access not on the basis of the index label but on the basis of integer location.
+
+data.iloc[0]
+Here 0 is not a label but it is an integer index.
+
+To understand integer indexing in a better way, let’s create an index which is not a numeric value so that things become clear.
+
+Just for example purposes, let’s set the job title as index for the dataframe:
+
+data_copy = data.set_index('Job Title')
+data_copy
+As you can see the index changed.
+
+Now let’s try accessing a row using the label index:
+
+data_copy.loc['Data Scientist']
+This will return multiple rows as there are lot of jobs with data scientist as title.
+
+Using multiple index values:
+
+data_copy.loc[['Data Scientist','Senior Data Engineer']]
+Now let’s use integer based indexing:
+
+data_copy.iloc[0]
+data_copy.iloc[201]
+The above will give access to rows which are present at that integer index position.
+
+Using iloc, you can also access multiple values at once.
+
+data_copy.iloc[[10,20]]
+Slicing with iloc.
+
+This is how to perform slicing with iloc
+
+data_copy.iloc[0:5]
+
+
+Lecture: Changing Values In DataFrame
+Let’s change the job title of the first row:
+
+data.head()
+data.loc[0,'Job Title'] = "Data Specialist"
+data.head()
+Let’s suppose you want to change multiple values inside the dataframe:
+
+You want to replace all occorrences of “Data Scientist” to “Data Specialist”
+
+data['Job Title'].replace("Data Scientist","Data Specialist")
+data['Job Title'] = data['Job Title'].replace("Data Scientist","Data Specialist")
+data.head(40)
+
+
+Lecture: Deleting Rows & Columns
+Let’s list all columns in our data frame:
+
+data.columns
+Out of this we want to remove all the columns for languages and technologies:
+
+data = data.drop(columns=['Python',
+       'spark', 'aws', 'excel', 'sql', 'sas', 'keras', 'pytorch', 'scikit',
+       'tensor', 'hadoop', 'tableau', 'bi', 'flink', 'mongo', 'google_an'])
+The drop method can also be used to delete rows as well:
+
+data.drop(index=[0])
+This will drop the 1st row from the data frame.
+
+Change wont be reflected on the original data frame as we are not saving it back into the original one.
+
+We can also delete rows and columns together as well:
+
+data = data.drop(index=[0],columns=['Python',
+       'spark', 'aws', 'excel', 'sql', 'sas', 'keras', 'pytorch', 'scikit',
+       'tensor', 'hadoop', 'tableau', 'bi', 'flink', 'mongo', 'google_an'])
+We can also use the pop method to remove a column from a dataframe:
+
+hqs = data.pop('Headquarters')
+hqs
+The pop method will return the popped column in terms of a series which we could store for later.
+
+We can also use the del keyword from python to delete a column:
+
+del data['Degree']
+
+
+Lecture: Loading Multi Index
+Read the data and set multi-index:
+
+import pandas as pd
+# Read data from the file
+data = pd.read_csv('happiness_report.csv')
+data =data.set_index(keys=['Country Name','Year'])
+ 
+# Access the index for above dataframe
+data.index
+data.index.names
+data.index[1]
+
+
+Lecture: Accessing Index At Multiple Levels
+How to extract values from a level.
+
+Let’s say you want to access values of an index form a multi index dataframe.
+
+This is how to do it:
+
+#This give us the entire index:
+data.index
+# To get year level values
+data.index.get_level_values('Year')
+# This gives us all the year values
+# To get countries:
+data.index.get_level_values('Country Name')
+How to rename index in multi index dataframe.
+
+#This gives us the multi_index:
+data.index
+Let’s say I want to change the name of the outermost index i.e country:
+
+# The outermost index in multi index has level 0
+data.index.set_names(names="Country",level=0)
+
+
+Lecture: Sorting A Multi-Indexed Data Frame
+This will sort both the index:
+
+data.sort_index()
+Sort in descending order:
+
+data.sort_index(ascending=False)
+Sort outer index in ascending order and inner index in descending:
+
+data.sort_index(ascending=[True,False])
+Sort outer index in descending and inner index in ascending:
+
+data.sort_index(ascending=[False,True])
+
+
+Lecture: Accessing Values
+Accessing values for India:
+
+data.loc['India']
+Accessing values for india in 2010
+
+data.loc['India',2010]
+You can also specify the values in a tuple as well:
+
+data.loc[('India',2010)]
+Once we can index values, we can perform slicing as well:
+
+Values for India from 2010 to 2021.
+
+data.loc[('India',2010):('India',2021)]
+This gives us all the values, but let’s suppose we want to get only the value for social support then we say:
+
+data.loc[('India',2010):('India',2021),'Social Support']
+
+
+Lecture: Stack Method
+Let’s re-read the data from happiness report:
+
+data = pd.read_csv('happiness_report.csv',)
+data
+Set the current index to “country name”:
+
+data = pd.read_csv('happiness_report.csv',index_col=['Country Name'])
+data
+ 
+Now let’s perform stack:
+
+data = data.stack()
+data.head()
+ 
+Now what happens is when we perform stack, the column indexes which we had before are now turned into row indexes.
+
+The row index which we had before has now become row index at level 1
+
+The column indexes which we had before have now become column indexes at level 2.
+
+You will also notice that now we have a multi index.
+
+This is how to access any value now:
+
+data['Afghanistan']['Year']
+data['Afghanistan']['Generosity']
+But what happens if we try to perform stack operation on a dataframe which is already multi indexed ?
+
+Let’s get back our original multi-indexed dataframe:
+
+import pandas as pd
+# Read data from the file
+data = pd.read_csv('happiness_report.csv')
+data =data.set_index(keys=['Country Name','Year'])
+data
+If we perform a stack on this, it will create a third level of index:
+
+data = data.stack()
+Now to access values in this, we need to use three level of indexes:
+
+data['Afghanistan',2008,'Social Support']
+#OR
+data['Afghanistan'][2008]['Social Support']
+
+
+Lecture: Unstack Method
+Using the unstack method we can unstack the data which we have:
+
+data
+Currently the data dataset has three levels of index, when we perform unstack, the third level of row index will be converted to column index:
+
+Now as index starts from 0 the third level is technically the 2nd level.
+
+data.unstack()
+ 
+When we perform the above unstack operation, by default it will first unstack the highest level which is level 3.
+
+But we can explicitly mention the level as well.
+
+Let’s suppose we want to unstack the level 0, we will pass:
+
+data.unstack(level=0)
+This will move the countries index which we had before to the column index.
+
+
+
+Lecture: Pivot Method
+The pivot method allows you to reshape a dataframe and set its row index and column index.
+
+To understand pivot let’s start from scratch:
+
+Read data into a dataframe:
+
+data = pd.read_csv('happiness_report.csv')
+data
+Let’s use pivot and set the row index and column index:
+
+data.pivot(index='Year',columns='Country Name')
+Let’s suppose you want to use a multi-index on row, you can say:
+
+data.pivot(index=['Year','Country Name'],columns=[])
+Let’s suppose you want to have country name index at first level and then the year, you can say:
+
+data.pivot(index=['Country Name','Year'],columns=[])
+After specifying the row and columns, you also have an option to select which values you want under the dataframe:
+
+data.pivot(index=['Country Name'],columns=['Year'],values="Generosity")
+Let’s suppose you want to have more values:
+
+data.pivot(index=['Country Name'],columns=['Year'],values=["Generosity","Social Support"])
+
+
+Lecture: Melt Method
+Melt method is the opposite of the pivot method.
+
+We can say that the melt method is used to unpivot a dataframe from a wide format to a long format.
+
+melt is used when we want to make our data taller in the sense that we convert columns into rows.
+
+Pivoting makes a dataframe wider whereas unpivoting or melting makes it longer.
+
+But why would we need these?
+
+There are certain data visualisation libraries which prefer data in such formats.
+
+Let’s first create a dataframe from scratch:
+
+data = pd.read_csv('happiness_report.csv')
+data
+Now let’s melt the dataframe:
+
+data.melt()
+This removed every column index and row index we had and instead converted them to something called variables.
+
+And the actual data we had in the dataframe is not present in the value column.
+
+But let’s suppose you want to use some columns we can say:
+
+data.melt(id_vars="Country Name")
+You can also change the index names for variable and value:
+
+data.melt(id_vars="Country Name",var_name="Metric",value_name="Value")
+
+
+Lecture: Pivot Table Method
+Pivot table method creates a spreadsheet like pivot table as a dataframe.
+
+A pivot table in data analysis or business intelligence is a tool which is used to summarize data.
+
+it allows us to present a large dataset in a report like format which contains the summary of the data.
+
+Let’s understand this by taking an example:
+
+data = pd.read_csv('happiness_report.csv')
+data
+ 
+Let’s say out of this large dataset we only want to get information about a country’s generosity.
+
+This is how to do it using the pivot table method:
+
+data.pivot_table(values="Generosity",index="Country Name")
+This gives us generosity of every country across all the years.
+
+The value for generosity across the years is averaged out and is given as a result.
+
+But we can also say how to aggregate the generosity values.
+
+For example, instead of averaging the genrosity, let’s say we want to add it.
+
+This is how to do it:
+
+data.pivot_table(values="Generosity",index="Country Name",aggfunc="sum")
+Now let’s try to have year as well along with the country name for the index:
+
+data.pivot_table(values="Generosity",index=["Country Name","Year"])
+Now let’s say along with generosity, you also want other value’s aggregate as well:
+
+data.pivot_table(values=["Generosity","Social Support","Life Ladder"],index=["Country Name"])
+
+
+Lecture: Group By & Methods
+gorupby allows us to split data into groups based on some condition and then apply a function to each group independently and then combine the results into a data structure.
+
+data = pd.read_csv('happiness_report.csv')
+data.head(20)
+ 
+countries = data.groupby("Country Name")
+# How many countries are there
+len(countries)
+# How many entries are there for each country
+countries.size()
+Now once we have grouped together different countries, let’s learn how to access those groups:
+
+countries.get_group("India")
+This will give us all the data for India till current date.
+
+Now let’s say you want to get the highest values for all the fields for India, we can say:
+
+countries.get_group("India").max()
+similarly we can get the min value as well:
+
+countries.get_group("India").min()
+You can also get the max values for every country as well as once we have grouped them together:
+
+countries.max()
+This will give max values for each country across all fields.
+
+Calculate mean of generosity across all countries
+
+countries['Generosity'].mean()
+Sort to find out which country is most generous:
+
+countries['Generosity'].mean().sort_values(ascending=False)
+Find the mean GDP per capita:
+
+countries['Log GDP Per Capita'].mean().sort_values(ascending=False).head(50)
+
+
+
+
+Lecture: Merging Datasets
+Let’s learn how to merge datasets.
+
+Most of the data analysis operations we are learning involve data preperation, loading, cleaning and transformation.
+
+Combining datasets is one of the operations we need to perform before analysing the data.
+
+There are multiple ways to combine datasets.
+
+We will learn how we can combine two datasets into one.
+
+Merge function allows us to connect two dataframes based on keys.
+
+Two dataframes, one which contain fruit prices for 2023, other one contains for 2024.
+
+from pandas import DataFrame
+df1 = DataFrame({'fruit':['apple','orange','banana','peach'],'prices 2023':[10,20,30,40]})
+df2 = DataFrame({'fruit':['apple','orange','mango'],'prices 2024':[12,33,35]})
+ 
+Let’s merge these two data frames:
+
+import pandas as pd
+pd.merge(df1,df2)
+While performing merge, it will look for the column names which are common.
+
+In this case we have fruit as common and hence it will consider “fruit” as the key and perform a merge on it
+
+Also you will notice that the fruits which are not common between the two dataframes will be eliminated.
+
+This is because when we use merge, it performs an intersection opearation.
+
+So if you know set operations, intersection of two sets A & B means selecting only those elements which are common to both set A & set B.
+
+Now just as we can perform intersection, we can perform union as well.
+
+To perform union between two datasets, we say:
+
+pd.merge(df1,df2,how="outer")
+Outer over here stands for outer join, if you have learned what joins are in SQL you would know.
+
+But to keep things simple, understand that outer selects all the elements in dataset a and dataset b.
+
+By default the how parameter is set to “inner” where it performs an inner join which is also called as intersection.
+
+Now let’s perform the left and the right join.
+
+Left join
+
+pd.merge(df1,df2,how='left')
+This will contain all the rows present in the left dataframe.
+
+Right join
+
+pd.merge(df1,df2,how='right')
+This will contain all the rows present in the right dataframe.
+
+
+
+Lecture: Merging With Multiple Keys
+We can also specify which column to perform merge on as well.
+
+Using on in merge.
+
+Let’s suppose we have two dataframes.
+
+Dataframe 1 contains product name and prices.
+
+Dataaframe 2 contains product name and categories.
+
+prices = DataFrame({'productid':[1001,1002,1003,1004],'name':['phone','book','computer','microwave'],'prices':[100,200,300,400]})
+categories = DataFrame({'productid':[1001,1002,1003,1004],'name':['phone','book','computer','microwave'],'categories':['electronics','reading','electronics','appliances']})
+prices
+pd.merge(prices,categories)
+In the above case it will automatically consider both columns i.e name and productid for performing the merge.
+
+Now let’s use the on parameter to explicitly perform a merge on a specific column:
+
+pd.merge(prices,categories,on='name')
+Now let’s perform merge on the basis of product_id:
+
+pd.merge(prices,categories,on='productid')
+
+
+Lecture: Merge on Index
+Let’s learn how to perform merge on index instead of performing merge on key values.
+
+In some cases the merge key is found in its index, in this case we need to know how to perform merge on the basis of an index.
+
+Example:
+
+Consider we have these two dataframes
+
+# DataFrame with product names
+df_names = pd.DataFrame({'Product Name': ['Laptop', 'Mouse', 'Keyboard', 'Monitor']},
+                         index=['P1', 'P2', 'P3', 'P4'])
+ 
+# DataFrame with product prices
+df_prices = pd.DataFrame({'Price': [1200, 25, 80, 250],'ProductID':['P1', 'P2', 'P3', 'P4']})
+In this case the first dataframe has an index value.
+
+Second dataframe does not have an index, but the ‘ProductID’ column is common between the two and we want to perform merge operation between the two.
+
+This is how you perform a merge:
+
+pd.merge(df_names,df_prices,left_index=True,right_on='ProductID')
+We want to consider the first data frames index as the key, and right dataframes ‘ProductID’ column as key.
+
+Hence we say left_index=True,right_on='ProductID'.
+
+Now let’s take another example where dataframe 1 does not have an index value but 2nd one has:
+
+# DataFrame with product names
+df_names = pd.DataFrame({'Product Name': ['Laptop', 'Mouse', 'Keyboard', 'Monitor'],'ProductID':['P1', 'P2', 'P3', 'P4']})
+ 
+# DataFrame with product prices
+df_prices = pd.DataFrame({'Price': [1200, 25, 80, 250]}, index=['P1', 'P2', 'P3', 'P4'])
+In this case we will have to change our merge query to:
+
+pd.merge(df_names,df_prices,right_index=True,left_on='ProductID')
+Now let’s consider third scenario where both data frames have an index:
+
+# DataFrame with product names
+df_names = pd.DataFrame({'Product Name': ['Laptop', 'Mouse', 'Keyboard', 'Monitor']},index=['P1', 'P2', 'P3', 'P4'])
+ 
+# DataFrame with product prices
+df_prices = pd.DataFrame({'Price': [1200, 25, 80, 250]}, index=['P1', 'P2', 'P3', 'P4'])
+In this case we will perform merge on both the indexes and hence we have left_index and right_index as true:
+
+pd.merge(df_names,df_prices,left_index=True,right_index=True)
+
+
+Lecture: Concat
+The merge operation allows you to place two data frames side-by-side.
+
+The concat operation allows you to stack two dataframes on top of each other.
+
+from pandas import DataFrame
+products = DataFrame({'name':['Phone','Laptop','Tablet'],'prices':[100,200,300]})
+digital_products = DataFrame({'name':['Yoga for beginners','the calm mind'],'prices':[500,600]})
+products
+Now let’s concat ttwo dataframes:
+
+import pandas as pd
+pd.concat([products,digital_products])
+Now we get two dataframes stacked on top of each other.
+
+Now let’s say we want ot get rid of the negative indexes:
+
+# What if we want to remove duplicate indexes
+pd.concat([products,digital_products],ignore_index=True)
+Let’s say we do not want to ignore the indexes and also classify the products into digital and physical even after concatenating them, then this is how to do it:
+
+pd.concat([products,digital_products],keys=['physical','digital'])
+This now has created an additional index for us, this is how to use that index:
+
+new_frame = pd.concat([products,digital_products],keys=['physical','digital'])
+new_frame.loc['physical']
+
+
+Lecture: Concat Side By Side
+Now let’s learn how we can concatenate dataframes side by side.
+
+Consider these two dataframes:
+
+prices = DataFrame({'name':['laptop','book','oven','heater'],'prices':[100,200,300,400]})
+categories = DataFrame({'name':['laptop','book','oven','heater'],'categories':['electronics','education','kitchen','commercial']})
+prices
+Let’s perform the concat side-by-side:
+
+pd.concat([prices,categories],axis=1)
+Now what if order of rows in both dataframes is not the same?
+
+Let’s change the order in second datafra
+
+prices = DataFrame({'name':['laptop','book','oven','heater'],'prices':[100,200,300,400]})
+categories = DataFrame({'name':['book','oven','heater','laptop'],'categories':['electronics','education','kitchen','commercial']})
+prices
+If this is the case then the concat will simply place two dataframes side by side and it wont be able to combine them:
+
+pd.concat([prices,categories],axis=1)
+Now to solve this, we use index on both dataframes as follows:
+
+We arrange index of second dataframe to match the index of the first dataframe
+
+prices = DataFrame({'name':['laptop','book','oven','heater'],'prices':[100,200,300,400]})
+categories = DataFrame({'name':['book','oven','heater','laptop'],'categories':['electronics','education','kitchen','commercial']},index=[1,2,3,0])
+prices
+Now if we perform concat, the two dataframes will be joined togther:
+
+pd.concat([prices,categories],axis=1)
+
+
+Lecture: Combine
+When there are two series or two data frames with overlapping index values, we can combine them together.
+
+For example, we have two people to give us temperature value of cities.
+
+Let’s save those values in two series as follows:
+
+from pandas import Series
+import numpy as np
+temp_1 = Series([14,np.nan,23,45,np.nan],index=['New york','London','Chicago','Berlin','Dallas'])
+temp_1
+temp_2 = Series([12,16,20,42,45],index=['New york','London','Chicago','Berlin','Dallas'])
+temp_2
+temp_1.combine_first(temp_2)
+The same applies for data frame as well:
+
+data1 = {
+    'City': ['New york','London','Chicago','Berlin','Dallas'],
+    'Temperature': [np.nan, 20, 19, 21,np.nan],
+    'Precipitation': [0.1, np.nan, 5.4, 2.3,5.5]
+}
+data2 = {
+    'City': ['New york','London','Chicago','Berlin','Dallas'],
+    'Temperature': [21, 20, 19, np.nan,13],
+    'Precipitation': [0.1, 0.5, 5.4, 2.3,np.nan]
+}
+df1 = DataFrame(data1)
+df2 = DataFrame(data2)
+df1.combine_first(df2)
+
+
+Lecture: Introduction To Time Series
+What is a time series?
+
+sometimes we have data which changes with time. Example is stock data.
+
+When some data is plotted against time it is called a time series.
+
+Time could be in minutes, seconds, hours or even days.
+
+Pandas also provides us some timeseries tools which we could use.
+
+Python standard library also contains some data structures for date and time.
+
+So in this lecture let’s learn about Python’s built in datetime module.
+
+Get current date and time:
+
+from datetime import datetime
+datetime.now()
+#Output: datetime.datetime(2024, 4, 10, 17, 20, 14, 692540)
+# Year,month,day, hour, minutes, seconds, microseconds
+We can also create our own date and convert it into a datetime object:
+
+# Let's create a date here in datetime format:
+date = datetime(2024,1,2)
+#date here is a datetime object
+date
+type(date)
+The best part about this datetime object is that we can get the year, day and month form it:
+
+date.day
+date.month
+date.year
+A datetime object can hold time as well:
+
+instance = datetime(2024,1,2,9,45,34)
+instance.year
+instance.month
+instance.day
+instance.hour
+instance.minute
+instance.second
+We can also find the difference between two dates.
+
+delta = datetime.now() - datetime(1990,1,1)
+delta
+Another reason why datetime module is required is because when you read the date from a file, that date will be present in a string format.
+
+To use that time, we first need to convert it into datetime format.
+
+This is how to do it:
+
+#convert this date to a string
+date_string = str(date)
+date_string
+Now once we have this string data, let’s learn how to convert it into a datetime object:
+
+#Now let's convert this string into a datetime format
+datetime.strptime(date_string,'%Y-%m-%d %H:%M:%S')
+Let’s now create a date from raw string and then convert it into a datetime object:
+
+my_date='2024-10-1'
+datetime.strptime(my_date,'%Y-%m-%d')
+
+
+Lecture: Creating Date ranges
+import pandas as pd
+# Create a range of dates from 1/1/2024 to 6/1/2024
+range = pd.date_range('1/1/2024','6/1/2024')
+range
+# Create date ranges which start form 1/1/2024 and continues for next 10 days
+pd.date_range(start='1/1/2024',periods=10)
+#opposite to the above one, lets specify the end date and calcuate 10 days before it:
+pd.date_range(end='1/1/2024',periods=10)
+# To the date range, we can also specify time along with the date
+pd.date_range(end='1/1/2024 10:45:23',periods=10)
+
+
+Lecture: Creating a Time Series
+Creating a time series:
+
+#Creating a time series
+from datetime import datetime
+from pandas import Series
+import numpy as np
+time=[datetime(2024,4,2),datetime(2024,4,4),datetime(2024,4,8),datetime(2024,4,11),datetime(2024,4,14),datetime(2024,4,16)]
+s = Series(np.random.randn(6),index=time)
+s
+Indexing a time series:
+
+#indexing time series
+# Let's first get the date:
+date_string = s.index[4]
+date_string
+# This gives us back a timestamp, a timestapm in pandas is similar to datetime in Python
+# to index a timeseries,we simply need to pass in this tiemstamp value as index:
+s[date_string]
+Another way of creating a time series:
+
+# Another way of creating a time-series
+# Instead of manually creating dates, we can create a range of dates
+import pandas as pd
+time_series = Series(np.random.randn(365),index=pd.date_range('1/1/2024',periods=365))
+time_series
+Performing slicing on time series
+
+# Perform slicing on the above timeseries
+time_series[datetime(2024,2,2):]
+Finding data in a particular date range
+
+# Find data in a particular range:
+time_series['1/5/2024':'1/9/2024']
+Delete data after a particular date
+
+# Delete data after a particular date
+time_series.truncate(after='2/2/2024')
+
+
+Lecture: Frequencies In Time Series
+What are frequencies in pandas and how they can be used in timeseries.
+
+Let’s generate a date range in pandas:
+
+import pandas as pd
+pd.date_range(start='1/1/2024',periods=20)
+By default the freq is set to D which means days.
+
+Hence in the date_range method, each period we define is not in terms or date.
+
+Hence it will generate 20 dates for us.
+
+Let’s change the freq to Hour instead:
+
+pd.date_range(start='1/1/2024',periods=20,freq='h')
+Now the frequency would be set to hours and we get entries separated by hour.
+
+As we have not defined any time, it will start at 00:00:00
+
+Let’s specify some time here as well:
+
+pd.date_range(start='1/1/2024 02:00:00',periods=20,freq='h')
+Suppose you want to set the frequency to business days instead of just days:
+
+pd.date_range(start='1/1/2024 02:00:00',periods=20,freq='b')
+You can also set the frequency to 9 hours as:
+
+pd.date_range(start='1/1/2024 02:00:00',periods=20,freq='9h')
+You can also set the minutes as well:
+
+pd.date_range(start='1/1/2024 02:00:00',periods=20,freq='9h34min')
+To get a list of all frequency aliases you can go to pandas official documentation and search for the pandas.date_range function.
+
+
+
+Lecture: Shifting Time Series
+The data which you get might not be perfectly aligned, it might lag behind or it might be way ahead of the time.
+
+In such cases we need to shift that data forward or backward.
+
+Let’s create a time series and see how we can shift the date or time forward and backward.
+
+Creating a timeseries:
+
+from pandas import Series
+import numpy as np
+ts = Series(np.random.randn(10),index=pd.date_range('1/1/2024',periods=10, freq='M'))
+ts
+# Let's try to shift this
+# Shift the data ahead by 7 months
+ts.shift(7)
+#Shift the data ahead by 20 days
+ts.shift(20,freq='D')
+# Shift the data backwards
+ts.shift(-10,freq='D')
+
+
+Lecture: Introduction To Matplotlib
+Matplotlib is a comprehensive library for creating static, animated and interactive visualisations in Python.
+
+Let’s learn how to create a simple plot using matplotlib.
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4,5])
+plt.show()
+Adding x label and y label to the graph
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4,5])
+plt.xlabel("This is X label")
+plt.ylabel("This is Y label")
+plt.show()
+Let’s plot some sales data:
+
+months = ["Jan","Feb","Mar","Apr","May","June"]
+sales = [50000,90000,120000,140000,111000,150000]
+plt.xlabel("Months")
+plt.ylabel("Sales in USD")
+plt.plot(months,sales)
+plt.show()
+Using red dots instead of blue line to represent data points
+
+months = ["Jan","Feb","Mar","Apr","May","June"]
+sales = [50000,90000,120000,140000,111000,150000]
+plt.xlabel("Months")
+plt.ylabel("Sales in USD")
+plt.plot(months,sales,'ro')
+plt.show()
+Plotting two graphs on a single plot.
+
+Consider we have sales data for two years, this is how to plot them on the same plot.
+
+import matplotlib.pyplot as plt
+months = ["Jan","Feb","Mar","Apr","May","June"]
+sales_2025 = [50000,90000,120000,140000,111000,150000]
+sales_2026 = [60000,120000,130000,110000,150000,190000]
+plt.plot(months,sales_2025,months,sales_2026)
+plt.xlabel("Months")
+plt.ylabel("Sales in USD")
+plt.legend(['2025','2026'])
+plt.show()
+ 
+
+
+Lecture: Plotting a Numpy Array
+Plotting a numpy array.
+
+Our main goal is to be able to plot Series & DataFrames for data visualisation.
+
+Hence let’s first start with plotting a simple numpy array.
+
+Let’s try to create values for time using a numpy array and let’s try to plot it.
+
+Creating a numpy array of values 0 to 10 seconds with an interval of 0.2:
+
+import numpy as np
+time = np.arange(0,10,0.2)
+time
+Let’s now try to plot these points:
+
+import numpy as np
+time = np.arange(0,10,0.2)
+plt.plot(time,time,'b--')
+plt.plot(time,time**2,'r^')
+plt.plot(time,time**3,'gs')
+
+
+Lecture: Setting Line Properties
+How to control line properties.
+
+By default when you plot some data, it is a blue line.
+
+But let’s say you want to change the color and the width of that line.
+
+This is how to do it:
+
+Use the linewidth property to increase the width of the line:
+
+plt.plot([1,2,3,4],[10,20,30,40],linewidth=5)
+plt.show()
+Setting multiple properties on a line:
+
+line = plt.plot([1,2,3,4],[10,20,30,40])
+plt.setp(line,color="r",linewidth=4)
+plt.show()
+You can also add the linestyle to it as well:
+
+line = plt.plot([1,2,3,4],[10,20,30,40])
+plt.setp(line,color="r",linewidth=4,linestyle="--")
+plt.show()
+
+
+Lecture: Plotting Subplots
+Till now we were plotting only one plot.
+
+Let’s now learn how to plot multiple subplots.
+
+In matplotlib the plots reside in figure object.
+
+When we are plotting plots, we need to create a figure.
+
+So let’s learn how to create a figure and then plot multiple sub-plots inside it.
+
+fig = plt.figure()
+#Create subplots
+#add_subplot(dimensions,number of subplots)
+# Dimenstions 2x2 means we have two rows and 2 columns in the figure and hence we have 4 subplots
+# 1 is the place where we want to place the current subplot, we want to place it in 1st subplot
+a = fig.add_subplot(2,2,1)
+# Let's create a couple more subplots
+b = fig.add_subplot(2,2,2)
+c = fig.add_subplot(2,2,3)
+plt.show()
+ 
+If you want to plot something on these plots you can say:
+
+fig = plt.figure()
+ 
+a = fig.add_subplot(2,2,1)
+ 
+b = fig.add_subplot(2,2,2)
+c = fig.add_subplot(2,2,3)
+# new code added
+plt.plot([1,2,3,4])
+# new code added
+plt.show()
+ 
+This plots it on the last subplot, now let’s learn how to plot in a specific subplot.
+
+fig = plt.figure()
+ 
+a = fig.add_subplot(2,2,1)
+b = fig.add_subplot(2,2,2)
+c = fig.add_subplot(2,2,3)
+d = fig.add_subplot(2,2,4)
+ 
+x = np.arange(100)
+a.plot(x,x)
+b.plot(x,x**2)
+c.plot(x,x**3)
+d.plot(x,x**4)
+ 
+plt.show()
+ 
+
+
+Lecture: Adding Grid & Text To Plot
+import numpy as np
+plt.plot(np.arange(50),np.arange(50)**2)
+plt.plot(np.arange(50),0.3*np.arange(50)**2)
+plt.ylabel("Revenue in millions")
+plt.xlabel("Period in number of years")
+plt.text(10,1000,"Revenue v/s Time")
+plt.text(30,500,"Profit v/s Time")
+plt.grid(True)
+plt.show()
+
+
+Lecture: Plotting DataFrame & Series
+Plotting a series
+import matplotlib.pyplot as plt
+from pandas import Series
+import numpy as np
+from numpy.random import randn
+ser = Series(randn(10),index=np.arange(0,100,10))
+ser.plot()
+plt.show()
+Plotting a dataframe:
+
+from pandas import DataFrame
+data = DataFrame(np.random.randn(10,4),columns=['a','b','c','d'],index=np.arange(10))
+data
+Now let’s plot this:
+
+data.plot()
+plt.show()
+Plotting a bar graph for dataFrame:
+
+data.plot(kind='bar')
+plt.show()
+Bar graph for a series
+
+s = Series(np.random.randn(20))
+s.plot(kind='bar')
+Plot it in a horizontal manner:
+
+s.plot(kind='barh')
